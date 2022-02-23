@@ -5,12 +5,15 @@ Lightweight accounting app for quick posting.
 
 Data structure:
 
-Company (has most of the settings for the application)
-Has accounting years
-Has a table of accounts
-Has journals
-Journal contains entries
-Entries contains rows
+<ul>
+  <li>Company (has most of the settings for the application)</li>
+<li>CHas accounting years</li>
+<li>CHas a table of accounts</li>
+<li>CHas journals</li>
+<li>CJournal contains entries</li>
+<li>CEntries contains rows</li>
+  </ul>
+  
 
 User
 Login information
