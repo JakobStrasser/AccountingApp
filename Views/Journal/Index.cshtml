@@ -1,0 +1,90 @@
+﻿@using AccountingApp.ViewModels;
+@model JournalViewModel
+
+
+
+<form id="DateForm">
+    <label name="dateLabel">Välj bokföringsdatum</label>
+    <input name="date" type="date" onchange="dateChange(this)" />
+</form>
+
+<form id="JournalForm">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Konto</th>
+                @foreach (Dimension d in Model.Dimensions)
+                {
+                    <th>@d.Name</th>
+                }
+                <th>Kredit</th>
+                <th>Debit</th>
+            </tr>
+        </thead>
+        <tbody id="JournalFormBody">
+            <tr>
+                <td>
+                    <input id="Row1AccountNumber" type="text" onchange="SearchAccounts(this, 1)" />
+                </td>
+                <td>
+                    <label id="Row1AccountName">Kontonamn</label>
+                </td>
+                @foreach (Dimension d in Model.Dimensions)
+                {
+                    <td>
+                        <input type="text" />
+                    </td>
+                }
+                <td>
+                    <input type="number" />
+                </td>
+                <td>
+                    <input type="number" />
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <input type="button" name="AddRowButton" onclick="AddRowButtonClicked(this)" value="+" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="SubmitFormButton" /> </td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+<script>
+    const Accounts = JSON.parse('@Html.Raw(Json.Serialize(Model.Accounts))');
+    let NumberOfRows = 1;
+
+    function dateChange(date) {
+       /* alert(date.value);*/
+    }
+
+    function AddRowButtonClicked(object) {
+
+        NumberOfRows++;
+        let dCount = @Model.Dimensions.Count;
+        let html = "<tr><td><input id\"Row" + NumberOfRows + "AccountNumber\" type=\"text\" onchange=\"SearchAccounts(this," + NumberOfRows + ")\"/></td > ";
+        html += " <td><label id=\"Row" + NumberOfRows + "AccountName\">Kontonamn</label></td >";
+        for (let i = 0; i < dCount; i++) {
+            html += "<td><input type = \"text\" /></td>";
+        }
+        html += "<td><input type = \"number\" /></td ><td><input type=\"number\" /></td></tr>";
+        $("#JournalFormBody").append(html);
+
+    }
+
+    function SearchAccounts(object, row ) {
+        /*TODO: Implement popup search*/
+        const currentValue = object.value;
+
+        if (Accounts[currentValue] !== null) {       
+            $("#Row" + row + "AccountName").text(Accounts[currentValue])
+        }
+        //console.log(Accounts);
+
+    }
+</script>

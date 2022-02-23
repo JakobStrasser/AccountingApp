@@ -1,0 +1,12 @@
+﻿@using AccountingApp.ViewModels
+@model CompanySelectorViewModel
+
+<ul>
+    @foreach (Company c in Model.Companies)
+    {
+    <li><a href="/Journal/@c.Id">@c.Name</a></li>
+    }
+    <li><a href="/Companies/Create">Skapa nytt bolag</a></li>
+</ul>
+
+
