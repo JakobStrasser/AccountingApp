@@ -32,6 +32,8 @@ namespace AccountingApp.Controllers
 
         public async Task<IActionResult> CompanySelector()
         {
+
+            //TODO: Save companyId to session
             string userName = HttpContext.User.Identity.Name;
             List<int> companyIds = await _context.UserCompanies.Where(uc => uc.UserName == userName).Select(c => c.CompanyId).ToListAsync();
             List<Company> companies = await _context.Companies.Where(c => companyIds.Contains(c.Id)).ToListAsync();

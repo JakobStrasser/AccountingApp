@@ -14,7 +14,7 @@ namespace AccountingApp.Models
         public List<AccountClass> AccountClasses { get; set; }
         public List<AccountGroup> AccountGroups { get; set; }
         public List<Account> Accounts { get; set; }
-        public List<Journal> journals { get; set; }
+        public List<Journal> Journals { get; set; }
         public List<JournalEntry> Transactions { get; set; }
         public List<Dimension> Dimensions { get; set; }
     }

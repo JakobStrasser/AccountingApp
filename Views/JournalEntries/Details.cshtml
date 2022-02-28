@@ -1,0 +1,80 @@
+﻿@using AccountingApp.ViewModels;
+@model JournalEntriesDetailViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>JournalEntry</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JournalEntry.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JournalEntry.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JournalEntry.Active)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JournalEntry.Active)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JournalEntry.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JournalEntry.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Konto</th>
+                <th>Debit</th>
+                <th>Kredit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (JournalEntriesDetailViewModelRow row in Model.Rows)
+            {
+                <tr>
+                    <td>
+                        @row.AccountNumber
+                    </td>
+                    <td>
+                        @row.AccountName
+                    </td>
+                    <td>
+                        @row.Debit
+                    </td>
+                    <td>
+                        @row.Credit
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    Summa
+                </td>
+                <td>
+                    @Model.DebitSum
+                </td>
+                <td>
+                    @Model.CreditSum
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<div>
+    <a asp-controller="Companies" asp-action="CompanySelector">Åter till bokföring</a>
+    @*TODO: Länka direkt till bokföringsview*@
+</div>

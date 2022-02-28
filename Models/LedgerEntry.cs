@@ -8,8 +8,8 @@ namespace AccountingApp.Models
     public class LedgerEntry
     {
         public int Id { get; set; }
-       
-        public Guid LedgerEntryId { get; set; }
+
+        public int JournalEntryId { get; set; }
         public int AccountId { get; set; }
         public Account Account { get; set; }
         public double Value { get; set; }

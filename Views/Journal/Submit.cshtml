@@ -1,0 +1,5 @@
+﻿@using AccountingApp.ViewModels;
+@model SubmitViewModel
+
+<h3><label asp-for="Status">@Model.Status</label></h3>
+<h2><a asp-controller="JournalEntries" asp-action="Details" asp-route-Id="@Model.JournalEntryId">Se utförd bokföring</a></h2>

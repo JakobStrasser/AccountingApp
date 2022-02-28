@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using AccountingApp.Models;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 
 namespace AccountingApp.Data
 {
@@ -22,10 +24,12 @@ namespace AccountingApp.Data
         public DbSet<Dimension> Dimensions { get; set; }
         public DbSet<DimensionItem> DimensionItems { get; set; }
         public DbSet<UserCompany> UserCompanies { get; set; }
-     
+
+   
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
         }
     }
 }
