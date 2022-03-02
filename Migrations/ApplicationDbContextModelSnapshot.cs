@@ -32,7 +32,7 @@ namespace AccountingApp.Migrations
                     b.Property<int>("AccountNumber")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CompanyId")
+                    b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -207,7 +207,7 @@ namespace AccountingApp.Migrations
 
             modelBuilder.Entity("AccountingApp.Models.Journal", b =>
                 {
-                    b.Property<int>("JournalId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -215,13 +215,13 @@ namespace AccountingApp.Migrations
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("CompanyId")
+                    b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("JournalId");
+                    b.HasKey("Id");
 
                     b.HasIndex("CompanyId");
 
@@ -230,9 +230,10 @@ namespace AccountingApp.Migrations
 
             modelBuilder.Entity("AccountingApp.Models.JournalEntry", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("AccountingYearId")
                         .HasColumnType("int");
@@ -246,6 +247,9 @@ namespace AccountingApp.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("JournalId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -254,6 +258,8 @@ namespace AccountingApp.Migrations
                     b.HasIndex("AccountingYearId");
 
                     b.HasIndex("CompanyId");
+
+                    b.HasIndex("JournalId");
 
                     b.ToTable("JournalEntry");
                 });
@@ -265,17 +271,14 @@ namespace AccountingApp.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AccountId")
+                    b.Property<int?>("AccountId")
                         .HasColumnType("int");
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
-                    b.Property<Guid?>("JournalEntryId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("LedgerEntryId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("JournalEntryId")
+                        .HasColumnType("int");
 
                     b.Property<double>("Value")
                         .HasColumnType("float");
@@ -539,7 +542,9 @@ namespace AccountingApp.Migrations
 
                     b.HasOne("AccountingApp.Models.Company", "Company")
                         .WithMany("Accounts")
-                        .HasForeignKey("CompanyId");
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("AccountGroup");
 
@@ -607,9 +612,13 @@ namespace AccountingApp.Migrations
 
             modelBuilder.Entity("AccountingApp.Models.Journal", b =>
                 {
-                    b.HasOne("AccountingApp.Models.Company", null)
-                        .WithMany("journals")
-                        .HasForeignKey("CompanyId");
+                    b.HasOne("AccountingApp.Models.Company", "Company")
+                        .WithMany("Journals")
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Company");
                 });
 
             modelBuilder.Entity("AccountingApp.Models.JournalEntry", b =>
@@ -622,6 +631,12 @@ namespace AccountingApp.Migrations
                         .WithMany("Transactions")
                         .HasForeignKey("CompanyId");
 
+                    b.HasOne("AccountingApp.Models.Journal", null)
+                        .WithMany("JournalEntries")
+                        .HasForeignKey("JournalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("AccountingYear");
 
                     b.Navigation("Company");
@@ -631,13 +646,13 @@ namespace AccountingApp.Migrations
                 {
                     b.HasOne("AccountingApp.Models.Account", "Account")
                         .WithMany()
-                        .HasForeignKey("AccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AccountId");
 
                     b.HasOne("AccountingApp.Models.JournalEntry", null)
                         .WithMany("Rows")
-                        .HasForeignKey("JournalEntryId");
+                        .HasForeignKey("JournalEntryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Account");
                 });
@@ -726,7 +741,7 @@ namespace AccountingApp.Migrations
 
                     b.Navigation("Dimensions");
 
-                    b.Navigation("journals");
+                    b.Navigation("Journals");
 
                     b.Navigation("Transactions");
                 });
@@ -739,6 +754,11 @@ namespace AccountingApp.Migrations
             modelBuilder.Entity("AccountingApp.Models.DimensionItem", b =>
                 {
                     b.Navigation("TransactionRowDimensions");
+                });
+
+            modelBuilder.Entity("AccountingApp.Models.Journal", b =>
+                {
+                    b.Navigation("JournalEntries");
                 });
 
             modelBuilder.Entity("AccountingApp.Models.JournalEntry", b =>

@@ -1,0 +1,1224 @@
+Category;CategoryName;Id
+101;Utvecklingsutgifter;1010
+101;Utvecklingsutgifter;1011
+101;Utvecklingsutgifter;1012
+101;Utvecklingsutgifter;1018
+101;Utvecklingsutgifter;1019
+102;Koncessioner m.m.;1020
+102;Koncessioner m.m.;1028
+102;Koncessioner m.m.;1029
+103;Patent;1030
+103;Patent;1038
+103;Patent;1039
+104;Licenser;1040
+104;Licenser;1048
+104;Licenser;1049
+105;Varumärken;1050
+105;Varumärken;1058
+105;Varumärken;1059
+106;Hyresrätter, tomträtter och liknande;1060
+106;Hyresrätter, tomträtter och liknande;1068
+106;Hyresrätter, tomträtter och liknande;1069
+107;Goodwill;1070
+107;Goodwill;1078
+107;Goodwill;1079
+108;Förskott för immateriella anläggningstillgångar;1080
+108;Förskott för immateriella anläggningstillgångar;1081
+108;Förskott för immateriella anläggningstillgångar;1088
+111;Byggnader;1110
+111;Byggnader;1111
+111;Byggnader;1112
+111;Byggnader;1118
+111;Byggnader;1119
+112;Förbättringsutgifter på annans fastighet;1120
+112;Förbättringsutgifter på annans fastighet;1129
+113;Mark;1130
+114;Tomter och obebyggda markområden;1140
+115;Markanläggningar;1150
+115;Markanläggningar;1158
+115;Markanläggningar;1159
+118;Pågående nyanläggningar och förskott för byggnader och mark;1180
+118;Pågående nyanläggningar och förskott för byggnader och mark;1181
+118;Pågående nyanläggningar och förskott för byggnader och mark;1188
+121;Maskiner och andra tekniska anläggningar;1210
+121;Maskiner och andra tekniska anläggningar;1211
+121;Maskiner och andra tekniska anläggningar;1213
+121;Maskiner och andra tekniska anläggningar;1218
+121;Maskiner och andra tekniska anläggningar;1219
+122;Inventarier och verktyg;1220
+122;Inventarier och verktyg;1221
+122;Inventarier och verktyg;1222
+122;Inventarier och verktyg;1223
+122;Inventarier och verktyg;1225
+122;Inventarier och verktyg;1228
+122;Inventarier och verktyg;1229
+123;Installationer;1230
+123;Installationer;1231
+123;Installationer;1232
+123;Installationer;1238
+123;Installationer;1239
+124;Bilar och andra transportmedel;1240
+124;Bilar och andra transportmedel;1241
+124;Bilar och andra transportmedel;1242
+124;Bilar och andra transportmedel;1243
+124;Bilar och andra transportmedel;1244
+124;Bilar och andra transportmedel;1245
+124;Bilar och andra transportmedel;1246
+124;Bilar och andra transportmedel;1247
+124;Bilar och andra transportmedel;1248
+124;Bilar och andra transportmedel;1249
+125;Datorer;1250
+125;Datorer;1251
+125;Datorer;1257
+125;Datorer;1258
+125;Datorer;1259
+126;Leasade tillgångar;1260
+126;Leasade tillgångar;1269
+128;Pågående nyanläggningar och förskott för maskiner och inventarier;1280
+128;Pågående nyanläggningar och förskott för maskiner och inventarier;1281
+128;Pågående nyanläggningar och förskott för maskiner och inventarier;1288
+129;Övriga materiella anläggningstillgångar;1290
+129;Övriga materiella anläggningstillgångar;1291
+129;Övriga materiella anläggningstillgångar;1292
+129;Övriga materiella anläggningstillgångar;1298
+129;Övriga materiella anläggningstillgångar;1299
+131;Andelar i koncernföretag;1310
+131;Andelar i koncernföretag;1311
+131;Andelar i koncernföretag;1312
+131;Andelar i koncernföretag;1313
+131;Andelar i koncernföretag;1314
+131;Andelar i koncernföretag;1316
+131;Andelar i koncernföretag;1317
+131;Andelar i koncernföretag;1318
+132;Långfristiga fordringar hos koncernföretag;1320
+132;Långfristiga fordringar hos koncernföretag;1321
+132;Långfristiga fordringar hos koncernföretag;1322
+132;Långfristiga fordringar hos koncernföretag;1323
+132;Långfristiga fordringar hos koncernföretag;1328
+133;Andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1330
+133;Andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1331
+133;Andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1332
+133;Andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1333
+133;Andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1334
+133;Andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1336
+133;Andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1337
+133;Andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1338
+134;Långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1340
+134;Långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1341
+134;Långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1342
+134;Långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1343
+134;Långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1344
+134;Långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1346
+134;Långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1347
+134;Långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1348
+135;Andelar och värdepapper i andra företag;1350
+135;Andelar och värdepapper i andra företag;1351
+135;Andelar och värdepapper i andra företag;1352
+135;Andelar och värdepapper i andra företag;1353
+135;Andelar och värdepapper i andra företag;1354
+135;Andelar och värdepapper i andra företag;1356
+135;Andelar och värdepapper i andra företag;1357
+135;Andelar och värdepapper i andra företag;1358
+136;Lån till delägare eller närstående enligt ABL, långfristig del;1360
+136;Lån till delägare eller närstående enligt ABL, långfristig del;1369
+137;Uppskjuten skattefordran;1370
+138;Andra långfristiga fordringar;1380
+138;Andra långfristiga fordringar;1381
+138;Andra långfristiga fordringar;1382
+138;Andra långfristiga fordringar;1383
+138;Andra långfristiga fordringar;1384
+138;Andra långfristiga fordringar;1385
+138;Andra långfristiga fordringar;1387
+138;Andra långfristiga fordringar;1388
+138;Andra långfristiga fordringar;1389
+141;Lager av råvaror;1410
+141;Lager av råvaror;1419
+142;Lager av tillsatsmaterial och förnödenheter;1420
+142;Lager av tillsatsmaterial och förnödenheter;1429
+144;Produkter i arbete;1440
+144;Produkter i arbete;1449
+145;Lager av färdiga varor;1450
+145;Lager av färdiga varor;1459
+146;Lager av handelsvaror;1460
+146;Lager av handelsvaror;1465
+146;Lager av handelsvaror;1466
+146;Lager av handelsvaror;1467
+146;Lager av handelsvaror;1469
+147;Pågående arbeten;1470
+147;Pågående arbeten;1471
+147;Pågående arbeten;1478
+147;Pågående arbeten;1479
+148;Förskott för varor och tjänster;1480
+148;Förskott för varor och tjänster;1481
+148;Förskott för varor och tjänster;1489
+149;Övriga lagertillgångar;1490
+149;Övriga lagertillgångar;1491
+149;Övriga lagertillgångar;1492
+149;Övriga lagertillgångar;1493
+151;Kundfordringar;1510
+151;Kundfordringar;1511
+151;Kundfordringar;1512
+151;Kundfordringar;1513
+151;Kundfordringar;1516
+151;Kundfordringar;1518
+151;Kundfordringar;1519
+152;Växelfordringar;1520
+152;Växelfordringar;1525
+152;Växelfordringar;1529
+153;Kontraktsfordringar;1530
+153;Kontraktsfordringar;1531
+153;Kontraktsfordringar;1532
+153;Kontraktsfordringar;1536
+153;Kontraktsfordringar;1539
+155;Konsignationsfordringar;1550
+156;Kundfordringar hos koncernföretag;1560
+156;Kundfordringar hos koncernföretag;1561
+156;Kundfordringar hos koncernföretag;1562
+156;Kundfordringar hos koncernföretag;1563
+156;Kundfordringar hos koncernföretag;1568
+156;Kundfordringar hos koncernföretag;1569
+157;Kundfordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1570
+157;Kundfordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1571
+157;Kundfordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1572
+157;Kundfordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1573
+158;Fordringar för kontokort och kuponger;1580
+161;Kortfristiga fordringar hos anställda;1610
+161;Kortfristiga fordringar hos anställda;1611
+161;Kortfristiga fordringar hos anställda;1612
+161;Kortfristiga fordringar hos anställda;1613
+161;Kortfristiga fordringar hos anställda;1614
+161;Kortfristiga fordringar hos anställda;1619
+162;Upparbetad men ej fakturerad intäkt;1620
+163;Avräkning för skatter och avgifter (skattekonto);1630
+164;Skattefordringar;1640
+165;Momsfordran;1650
+166;Kortfristiga fordringar hos koncernföretag;1660
+166;Kortfristiga fordringar hos koncernföretag;1661
+166;Kortfristiga fordringar hos koncernföretag;1662
+166;Kortfristiga fordringar hos koncernföretag;1663
+167;Kortfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1670
+167;Kortfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1671
+167;Kortfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1672
+167;Kortfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;1673
+168;Andra kortfristiga fordringar;1680
+168;Andra kortfristiga fordringar;1681
+168;Andra kortfristiga fordringar;1682
+168;Andra kortfristiga fordringar;1683
+168;Andra kortfristiga fordringar;1684
+168;Andra kortfristiga fordringar;1685
+168;Andra kortfristiga fordringar;1687
+168;Andra kortfristiga fordringar;1688
+168;Andra kortfristiga fordringar;1689
+169;Fordringar för tecknat men ej inbetalt aktiekapital;1690
+171;Förutbetalda hyreskostnader;1710
+172;Förutbetalda leasingavgifter;1720
+173;Förutbetalda försäkringspremier;1730
+174;Förutbetalda räntekostnader;1740
+175;Upplupna hyresintäkter;1750
+176;Upplupna ränteintäkter;1760
+177;Tillgångar av kostnadsnatur;1770
+178;Upplupna avtalsintäkter;1780
+179;Övriga förutbetalda kostnader och upplupna intäkter;1790
+181;Andelar i börsnoterade företag;1810
+182;Obligationer;1820
+183;Konvertibla skuldebrev;1830
+186;Andelar i koncernföretag, kortfristigt;1860
+188;Andra kortfristiga placeringar;1880
+188;Andra kortfristiga placeringar;1886
+188;Andra kortfristiga placeringar;1889
+189;Nedskrivning av kortfristiga placeringar;1890
+191;Kassa;1910
+191;Kassa;1911
+191;Kassa;1912
+191;Kassa;1913
+192;PlusGiro;1920
+193;Företagskonto/checkkonto/affärskonto;1930
+194;Övriga bankkonton;1940
+195;Bankcertifikat;1950
+196;Koncernkonto moderföretag;1960
+197;Särskilda bankkonton;1970
+197;Särskilda bankkonton;1972
+197;Särskilda bankkonton;1973
+197;Särskilda bankkonton;1974
+197;Särskilda bankkonton;1979
+198;Valutakonton;1980
+199;Redovisningsmedel;1990
+201;Eget kapital, delägare 1;2010
+201;Eget kapital, delägare 1;2011
+201;Eget kapital, delägare 1;2013
+201;Eget kapital, delägare 1;2017
+201;Eget kapital, delägare 1;2018
+201;Eget kapital, delägare 1;2019
+202;Eget kapital, delägare 2;2020
+202;Eget kapital, delägare 2;2021
+202;Eget kapital, delägare 2;2023
+202;Eget kapital, delägare 2;2027
+202;Eget kapital, delägare 2;2028
+202;Eget kapital, delägare 2;2029
+203;Eget kapital, delägare 3;2030
+203;Eget kapital, delägare 3;2031
+203;Eget kapital, delägare 3;2033
+203;Eget kapital, delägare 3;2037
+203;Eget kapital, delägare 3;2038
+203;Eget kapital, delägare 3;2039
+204;Eget kapital, delägare 4;2040
+204;Eget kapital, delägare 4;2041
+204;Eget kapital, delägare 4;2043
+204;Eget kapital, delägare 4;2047
+204;Eget kapital, delägare 4;2048
+204;Eget kapital, delägare 4;2049
+205;Avsättning till expansionsfond;2050
+206;Eget kapital i ideella föreningar, stiftelser och registrerade trossamfund;2060
+206;Eget kapital i ideella föreningar, stiftelser och registrerade trossamfund;2061
+206;Eget kapital i ideella föreningar, stiftelser och registrerade trossamfund;2065
+206;Eget kapital i ideella föreningar, stiftelser och registrerade trossamfund;2066
+206;Eget kapital i ideella föreningar, stiftelser och registrerade trossamfund;2067
+206;Eget kapital i ideella föreningar, stiftelser och registrerade trossamfund;2068
+206;Eget kapital i ideella föreningar, stiftelser och registrerade trossamfund;2069
+207;Ändamålsbestämda medel;2070
+207;Ändamålsbestämda medel;2071
+207;Ändamålsbestämda medel;2072
+208;Bundet eget kapital;2080
+208;Bundet eget kapital;2081
+208;Bundet eget kapital;2082
+208;Bundet eget kapital;2083
+208;Bundet eget kapital;2084
+208;Bundet eget kapital;2085
+208;Bundet eget kapital;2086
+208;Bundet eget kapital;2087
+208;Bundet eget kapital;2088
+208;Bundet eget kapital;2089
+209;Fritt eget kapital;2090
+209;Fritt eget kapital;2091
+209;Fritt eget kapital;2092
+209;Fritt eget kapital;2093
+209;Fritt eget kapital;2094
+209;Fritt eget kapital;2095
+209;Fritt eget kapital;2096
+209;Fritt eget kapital;2097
+209;Fritt eget kapital;2098
+209;Fritt eget kapital;2099
+211;Periodiseringsfonder;2110
+212;Periodiseringsfond 2020;2120
+212;Periodiseringsfond 2020;2121
+212;Periodiseringsfond 2020;2122
+212;Periodiseringsfond 2020;2123
+212;Periodiseringsfond 2020;2125
+212;Periodiseringsfond 2020;2126
+212;Periodiseringsfond 2020;2127
+212;Periodiseringsfond 2020;2128
+212;Periodiseringsfond 2020;2129
+213;Periodiseringsfond 2020 – nr 2;2130
+213;Periodiseringsfond 2020 – nr 2;2131
+213;Periodiseringsfond 2020 – nr 2;2132
+213;Periodiseringsfond 2020 – nr 2;2133
+213;Periodiseringsfond 2020 – nr 2;2134
+213;Periodiseringsfond 2020 – nr 2;2135
+213;Periodiseringsfond 2020 – nr 2;2136
+213;Periodiseringsfond 2020 – nr 2;2137
+213;Periodiseringsfond 2020 – nr 2;2138
+213;Periodiseringsfond 2020 – nr 2;2139
+215;Ackumulerade överavskrivningar;2150
+215;Ackumulerade överavskrivningar;2151
+215;Ackumulerade överavskrivningar;2152
+215;Ackumulerade överavskrivningar;2153
+216;Ersättningsfond;2160
+216;Ersättningsfond;2161
+216;Ersättningsfond;2162
+216;Ersättningsfond;2164
+219;Övriga obeskattade reserver;2190
+219;Övriga obeskattade reserver;2196
+219;Övriga obeskattade reserver;2199
+221;Avsättningar för pensioner enligt tryggandelagen;2210
+222;Avsättningar för garantier;2220
+223;Övriga avsättningar för pensioner och liknande förpliktelser;2230
+224;Avsättningar för uppskjutna skatter;2240
+225;Övriga avsättningar för skatter;2250
+225;Övriga avsättningar för skatter;2252
+225;Övriga avsättningar för skatter;2253
+229;Övriga avsättningar;2290
+231;Obligations- och förlagslån;2310
+232;Konvertibla lån och liknande;2320
+232;Konvertibla lån och liknande;2321
+232;Konvertibla lån och liknande;2322
+232;Konvertibla lån och liknande;2323
+232;Konvertibla lån och liknande;2324
+233;Checkräkningskredit;2330
+233;Checkräkningskredit;2331
+233;Checkräkningskredit;2332
+234;Byggnadskreditiv;2340
+235;Andra långfristiga skulder till kreditinstitut;2350
+235;Andra långfristiga skulder till kreditinstitut;2351
+235;Andra långfristiga skulder till kreditinstitut;2355
+235;Andra långfristiga skulder till kreditinstitut;2359
+236;Långfristiga skulder till koncernföretag;2360
+236;Långfristiga skulder till koncernföretag;2361
+236;Långfristiga skulder till koncernföretag;2362
+236;Långfristiga skulder till koncernföretag;2363
+237;Långfristiga skulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2370
+237;Långfristiga skulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2371
+237;Långfristiga skulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2372
+237;Långfristiga skulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2373
+239;Övriga långfristiga skulder;2390
+239;Övriga långfristiga skulder;2391
+239;Övriga långfristiga skulder;2392
+239;Övriga långfristiga skulder;2393
+239;Övriga långfristiga skulder;2394
+239;Övriga långfristiga skulder;2395
+239;Övriga långfristiga skulder;2396
+239;Övriga långfristiga skulder;2397
+239;Övriga långfristiga skulder;2399
+241;Andra kortfristiga låneskulder till kreditinstitut;2410
+241;Andra kortfristiga låneskulder till kreditinstitut;2411
+241;Andra kortfristiga låneskulder till kreditinstitut;2412
+241;Andra kortfristiga låneskulder till kreditinstitut;2417
+241;Andra kortfristiga låneskulder till kreditinstitut;2419
+242;Förskott från kunder;2420
+242;Förskott från kunder;2421
+242;Förskott från kunder;2429
+243;Pågående arbeten;2430
+243;Pågående arbeten;2431
+243;Pågående arbeten;2438
+243;Pågående arbeten;2439
+244;Leverantörsskulder;2440
+244;Leverantörsskulder;2441
+244;Leverantörsskulder;2443
+244;Leverantörsskulder;2445
+244;Leverantörsskulder;2448
+245;Fakturerad men ej upparbetad intäkt;2450
+246;Leverantörsskulder till koncernföretag;2460
+246;Leverantörsskulder till koncernföretag;2461
+246;Leverantörsskulder till koncernföretag;2462
+246;Leverantörsskulder till koncernföretag;2463
+247;Leverantörsskulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2470
+247;Leverantörsskulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2471
+247;Leverantörsskulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2472
+247;Leverantörsskulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2473
+248;Checkräkningskredit, kortfristig;2480
+249;Övriga kortfristiga skulder till kreditinstitut, kunder och leverantörer;2490
+249;Övriga kortfristiga skulder till kreditinstitut, kunder och leverantörer;2491
+249;Övriga kortfristiga skulder till kreditinstitut, kunder och leverantörer;2492
+249;Övriga kortfristiga skulder till kreditinstitut, kunder och leverantörer;2499
+251;Skatteskulder;2510
+251;Skatteskulder;2512
+251;Skatteskulder;2513
+251;Skatteskulder;2514
+251;Skatteskulder;2515
+251;Skatteskulder;2517
+251;Skatteskulder;2518
+261;Utgående moms, 25 %;2610
+261;Utgående moms, 25 %;2611
+261;Utgående moms, 25 %;2612
+261;Utgående moms, 25 %;2613
+261;Utgående moms, 25 %;2614
+261;Utgående moms, 25 %;2615
+261;Utgående moms, 25 %;2616
+261;Utgående moms, 25 %;2618
+262;Utgående moms, 12 %;2620
+262;Utgående moms, 12 %;2621
+262;Utgående moms, 12 %;2622
+262;Utgående moms, 12 %;2623
+262;Utgående moms, 12 %;2624
+262;Utgående moms, 12 %;2625
+262;Utgående moms, 12 %;2626
+262;Utgående moms, 12 %;2628
+263;Utgående moms, 6 %;2630
+263;Utgående moms, 6 %;2631
+263;Utgående moms, 6 %;2632
+263;Utgående moms, 6 %;2633
+263;Utgående moms, 6 %;2634
+263;Utgående moms, 6 %;2635
+263;Utgående moms, 6 %;2636
+263;Utgående moms, 6 %;2638
+264;Ingående moms;2640
+264;Ingående moms;2641
+264;Ingående moms;2642
+264;Ingående moms;2645
+264;Ingående moms;2646
+264;Ingående moms;2647
+264;Ingående moms;2648
+264;Ingående moms;2649
+265;Redovisningskonto för moms;2650
+266;Särskilda punktskatter;2660
+266;Särskilda punktskatter;2661
+266;Särskilda punktskatter;2669
+271;Personalskatt;2710
+273;Lagstadgade sociala avgifter och särskild löneskatt;2730
+273;Lagstadgade sociala avgifter och särskild löneskatt;2731
+273;Lagstadgade sociala avgifter och särskild löneskatt;2732
+274;Avtalade sociala avgifter;2740
+275;Utmätning i lön m.m.;2750
+276;Semestermedel;2760
+276;Semestermedel;2761
+276;Semestermedel;2762
+279;Övriga löneavdrag;2790
+279;Övriga löneavdrag;2791
+279;Övriga löneavdrag;2792
+279;Övriga löneavdrag;2793
+279;Övriga löneavdrag;2794
+279;Övriga löneavdrag;2795
+279;Övriga löneavdrag;2799
+281;Avräkning för factoring och belånade kontraktsfordringar;2810
+281;Avräkning för factoring och belånade kontraktsfordringar;2811
+281;Avräkning för factoring och belånade kontraktsfordringar;2812
+282;Kortfristiga skulder till anställda;2820
+282;Kortfristiga skulder till anställda;2821
+282;Kortfristiga skulder till anställda;2822
+282;Kortfristiga skulder till anställda;2823
+282;Kortfristiga skulder till anställda;2829
+283;Avräkning för annans räkning;2830
+284;Kortfristiga låneskulder;2840
+284;Kortfristiga låneskulder;2841
+284;Kortfristiga låneskulder;2849
+285;Avräkning för skatter och avgifter (skattekonto);2850
+285;Avräkning för skatter och avgifter (skattekonto);2852
+286;Kortfristiga skulder till koncernföretag;2860
+286;Kortfristiga skulder till koncernföretag;2861
+286;Kortfristiga skulder till koncernföretag;2862
+286;Kortfristiga skulder till koncernföretag;2863
+287;Kortfristiga skulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2870
+287;Kortfristiga skulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2871
+287;Kortfristiga skulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2872
+287;Kortfristiga skulder till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;2873
+288;Skuld erhållna bidrag;2880
+289;Övriga kortfristiga skulder;2890
+289;Övriga kortfristiga skulder;2891
+289;Övriga kortfristiga skulder;2892
+289;Övriga kortfristiga skulder;2893
+289;Övriga kortfristiga skulder;2895
+289;Övriga kortfristiga skulder;2897
+289;Övriga kortfristiga skulder;2898
+289;Övriga kortfristiga skulder;2899
+291;Upplupna löner;2910
+291;Upplupna löner;2911
+291;Upplupna löner;2912
+291;Upplupna löner;2919
+292;Upplupna semesterlöner;2920
+293;Upplupna pensionskostnader;2930
+293;Upplupna pensionskostnader;2931
+294;Upplupna lagstadgade sociala och andra avgifter;2940
+294;Upplupna lagstadgade sociala och andra avgifter;2941
+294;Upplupna lagstadgade sociala och andra avgifter;2942
+294;Upplupna lagstadgade sociala och andra avgifter;2943
+294;Upplupna lagstadgade sociala och andra avgifter;2944
+295;Upplupna avtalade sociala avgifter;2950
+295;Upplupna avtalade sociala avgifter;2951
+295;Upplupna avtalade sociala avgifter;2959
+296;Upplupna räntekostnader;2960
+297;Förutbetalda intäkter;2970
+297;Förutbetalda intäkter;2971
+297;Förutbetalda intäkter;2972
+297;Förutbetalda intäkter;2979
+298;Upplupna avtalskostnader;2980
+299;Övriga upplupna kostnader och förutbetalda intäkter;2990
+299;Övriga upplupna kostnader och förutbetalda intäkter;2991
+299;Övriga upplupna kostnader och förutbetalda intäkter;2992
+299;Övriga upplupna kostnader och förutbetalda intäkter;2993
+299;Övriga upplupna kostnader och förutbetalda intäkter;2998
+299;Övriga upplupna kostnader och förutbetalda intäkter;2999
+300;Försäljning inom Sverige;3000
+300;Försäljning inom Sverige;3001
+300;Försäljning inom Sverige;3002
+300;Försäljning inom Sverige;3003
+300;Försäljning inom Sverige;3004
+310;Försäljning av varor utanför Sverige;3100
+310;Försäljning av varor utanför Sverige;3105
+310;Försäljning av varor utanför Sverige;3106
+310;Försäljning av varor utanför Sverige;3108
+320;Försäljning VMB och omvänd moms;3200
+321;Försäljning positiv VMB 25 %;3211
+321;Försäljning positiv VMB 25 %;3212
+323;Försäljning inom byggsektorn, omvänd skattskyldighet moms;3231
+330;Försäljning av tjänster utanför Sverige;3300
+330;Försäljning av tjänster utanför Sverige;3305
+330;Försäljning av tjänster utanför Sverige;3308
+340;Försäljning, egna uttag;3400
+340;Försäljning, egna uttag;3401
+340;Försäljning, egna uttag;3402
+340;Försäljning, egna uttag;3403
+340;Försäljning, egna uttag;3404
+350;Fakturerade kostnader (gruppkonto);3500
+351;Fakturerat emballage;3510
+351;Fakturerat emballage;3511
+351;Fakturerat emballage;3518
+352;Fakturerade frakter;3520
+352;Fakturerade frakter;3521
+352;Fakturerade frakter;3522
+353;Fakturerade tull- och speditionskostnader m.m.;3530
+354;Faktureringsavgifter;3540
+354;Faktureringsavgifter;3541
+354;Faktureringsavgifter;3542
+355;Fakturerade resekostnader;3550
+356;Fakturerade kostnader till koncernföretag;3560
+356;Fakturerade kostnader till koncernföretag;3561
+356;Fakturerade kostnader till koncernföretag;3562
+356;Fakturerade kostnader till koncernföretag;3563
+357;Fakturerade kostnader till intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;3570
+359;Övriga fakturerade kostnader;3590
+360;Rörelsens sidointäkter (gruppkonto);3600
+361;Försäljning av material;3610
+361;Försäljning av material;3611
+361;Försäljning av material;3612
+361;Försäljning av material;3613
+361;Försäljning av material;3619
+362;Tillfällig uthyrning av personal;3620
+363;Tillfällig uthyrning av transportmedel;3630
+367;Intäkter från värdepapper;3670
+367;Intäkter från värdepapper;3671
+367;Intäkter från värdepapper;3672
+367;Intäkter från värdepapper;3679
+368;Management fees;3680
+369;Övriga sidointäkter;3690
+370;Intäktskorrigeringar (gruppkonto);3700
+371;Ofördelade intäktsreduktioner;3710
+373;Lämnade rabatter;3730
+373;Lämnade rabatter;3731
+373;Lämnade rabatter;3732
+374;Öres- och kronutjämning;3740
+375;Punktskatter;3750
+375;Punktskatter;3751
+375;Punktskatter;3752
+379;Övriga intäktskorrigeringar;3790
+380;Aktiverat arbete för egen räkning (gruppkonto);3800
+384;Aktiverat arbete (material);3840
+385;Aktiverat arbete (omkostnader);3850
+387;Aktiverat arbete (personal);3870
+390;Övriga rörelseintäkter (gruppkonto);3900
+391;Hyres- och arrendeintäkter;3910
+391;Hyres- och arrendeintäkter;3911
+391;Hyres- och arrendeintäkter;3912
+391;Hyres- och arrendeintäkter;3913
+391;Hyres- och arrendeintäkter;3914
+392;Provisionsintäkter, licensintäkter och royalties;3920
+392;Provisionsintäkter, licensintäkter och royalties;3921
+392;Provisionsintäkter, licensintäkter och royalties;3922
+392;Provisionsintäkter, licensintäkter och royalties;3925
+394;Orealiserade negativa/positiva värdeförändringar på säkringsinstrument;3940
+395;Återvunna, tidigare avskrivna kundfordringar;3950
+396;Valutakursvinster på fordringar och skulder av rörelsekaraktär;3960
+397;Vinst vid avyttring av immateriella och materiella anläggningstillgångar;3970
+397;Vinst vid avyttring av immateriella och materiella anläggningstillgångar;3971
+397;Vinst vid avyttring av immateriella och materiella anläggningstillgångar;3972
+397;Vinst vid avyttring av immateriella och materiella anläggningstillgångar;3973
+398;Erhållna offentliga bidrag;3980
+398;Erhållna offentliga bidrag;3981
+398;Erhållna offentliga bidrag;3985
+398;Erhållna offentliga bidrag;3987
+398;Erhållna offentliga bidrag;3988
+398;Erhållna offentliga bidrag;3989
+399;Övriga ersättningar, bidrag och intäkter;3990
+399;Övriga ersättningar, bidrag och intäkter;3991
+399;Övriga ersättningar, bidrag och intäkter;3992
+399;Övriga ersättningar, bidrag och intäkter;3993
+399;Övriga ersättningar, bidrag och intäkter;3994
+399;Övriga ersättningar, bidrag och intäkter;3995
+399;Övriga ersättningar, bidrag och intäkter;3996
+399;Övriga ersättningar, bidrag och intäkter;3997
+399;Övriga ersättningar, bidrag och intäkter;3998
+399;Övriga ersättningar, bidrag och intäkter;3999
+400;Inköp av varor från Sverige;4000
+420;Sålda varor VMB;4200
+421;Sålda varor positiv VMB 25 %;4211
+421;Sålda varor positiv VMB 25 %;4212
+440;Momspliktiga inköp i Sverige;4400
+441;Inköpta varor i Sverige, omvänd skattskyldighet, 25 % moms;4415
+441;Inköpta varor i Sverige, omvänd skattskyldighet, 25 % moms;4416
+441;Inköpta varor i Sverige, omvänd skattskyldighet, 25 % moms;4417
+442;Inköpta tjänster i Sverige, omvänd skattskyldighet, 25 % moms;4425
+442;Inköpta tjänster i Sverige, omvänd skattskyldighet, 25 % moms;4426
+442;Inköpta tjänster i Sverige, omvänd skattskyldighet, 25 % moms;4427
+450;Övriga momspliktiga inköp;4500
+451;Inköp av varor från annat EU-land, 25 %;4515
+451;Inköp av varor från annat EU-land, 25 %;4516
+451;Inköp av varor från annat EU-land, 25 %;4517
+451;Inköp av varor från annat EU-land, 25 %;4518
+453;Inköp av tjänster från ett land utanför EU, 25 % moms;4531
+453;Inköp av tjänster från ett land utanför EU, 25 % moms;4532
+453;Inköp av tjänster från ett land utanför EU, 25 % moms;4533
+453;Inköp av tjänster från ett land utanför EU, 25 % moms;4535
+453;Inköp av tjänster från ett land utanför EU, 25 % moms;4536
+453;Inköp av tjänster från ett land utanför EU, 25 % moms;4537
+453;Inköp av tjänster från ett land utanför EU, 25 % moms;4538
+454;Import av varor, 25 % moms;4545
+454;Import av varor, 25 % moms;4546
+454;Import av varor, 25 % moms;4547
+460;Legoarbeten och underentreprenader (gruppkonto);4600
+470;Reduktion av inköpspriser (gruppkonto);4700
+473;Erhållna rabatter;4730
+473;Erhållna rabatter;4731
+473;Erhållna rabatter;4732
+473;Erhållna rabatter;4733
+479;Övriga reduktioner av inköpspriser;4790
+490;Förändring av lager (gruppkonto);4900
+491;Förändring av lager av råvaror;4910
+492;Förändring av lager av tillsatsmaterial och förnödenheter;4920
+494;Förändring av produkter i arbete;4940
+494;Förändring av produkter i arbete;4944
+494;Förändring av produkter i arbete;4945
+494;Förändring av produkter i arbete;4947
+495;Förändring av lager av färdiga varor;4950
+496;Förändring av lager av handelsvaror;4960
+497;Förändring av pågående arbeten, nedlagda kostnader;4970
+497;Förändring av pågående arbeten, nedlagda kostnader;4974
+497;Förändring av pågående arbeten, nedlagda kostnader;4975
+497;Förändring av pågående arbeten, nedlagda kostnader;4977
+498;Förändring av lager av värdepapper;4980
+498;Förändring av lager av värdepapper;4981
+498;Förändring av lager av värdepapper;4987
+498;Förändring av lager av värdepapper;4988
+500;Lokalkostnader (gruppkonto);5000
+501;Lokalhyra;5010
+501;Lokalhyra;5011
+501;Lokalhyra;5012
+501;Lokalhyra;5013
+502;El för belysning;5020
+503;Värme;5030
+504;Vatten och avlopp;5040
+505;Lokaltillbehör;5050
+506;Städning och renhållning;5060
+506;Städning och renhållning;5061
+506;Städning och renhållning;5062
+506;Städning och renhållning;5063
+506;Städning och renhållning;5064
+506;Städning och renhållning;5065
+507;Reparation och underhåll av lokaler;5070
+509;Övriga lokalkostnader;5090
+509;Övriga lokalkostnader;5098
+509;Övriga lokalkostnader;5099
+510;Fastighetskostnader (gruppkonto);5100
+511;Tomträttsavgäld/arrende;5110
+512;El för belysning;5120
+513;Värme;5130
+513;Värme;5131
+513;Värme;5132
+514;Vatten och avlopp;5140
+516;Städning och renhållning;5160
+516;Städning och renhållning;5161
+516;Städning och renhållning;5162
+516;Städning och renhållning;5163
+516;Städning och renhållning;5164
+516;Städning och renhållning;5165
+517;Reparation och underhåll av fastighet;5170
+519;Övriga fastighetskostnader;5190
+519;Övriga fastighetskostnader;5191
+519;Övriga fastighetskostnader;5192
+519;Övriga fastighetskostnader;5193
+519;Övriga fastighetskostnader;5198
+519;Övriga fastighetskostnader;5199
+520;Hyra av anläggningstillgångar (gruppkonto);5200
+521;Hyra av maskiner och andra tekniska anläggningar;5210
+521;Hyra av maskiner och andra tekniska anläggningar;5211
+521;Hyra av maskiner och andra tekniska anläggningar;5212
+522;Hyra av inventarier och verktyg;5220
+522;Hyra av inventarier och verktyg;5221
+522;Hyra av inventarier och verktyg;5222
+525;Hyra av datorer;5250
+525;Hyra av datorer;5251
+525;Hyra av datorer;5252
+529;Övriga hyreskostnader för anläggningstillgångar;5290
+530;Energikostnader (gruppkonto);5300
+531;El för drift;5310
+532;Gas;5320
+533;Eldningsolja;5330
+534;Stenkol och koks;5340
+535;Torv, träkol, ved och annat träbränsle;5350
+536;Bensin, fotogen och motorbrännolja;5360
+537;Fjärrvärme, kyla och ånga;5370
+538;Vatten;5380
+539;Övriga energikostnader;5390
+540;Förbrukningsinventarier och förbrukningsmaterial (gruppkonto);5400
+541;Förbrukningsinventarier;5410
+541;Förbrukningsinventarier;5411
+541;Förbrukningsinventarier;5412
+542;Programvaror;5420
+543;Transportinventarier;5430
+544;Förbrukningsemballage;5440
+546;Förbrukningsmaterial;5460
+548;Arbetskläder och skyddsmaterial;5480
+549;Övriga förbrukningsinventarier och förbrukningsmaterial;5490
+549;Övriga förbrukningsinventarier och förbrukningsmaterial;5491
+549;Övriga förbrukningsinventarier och förbrukningsmaterial;5492
+549;Övriga förbrukningsinventarier och förbrukningsmaterial;5493
+550;Reparation och underhåll (gruppkonto);5500
+551;Reparation och underhåll av maskiner och andra tekniska anläggningar;5510
+552;Reparation och underhåll av inventarier, verktyg och datorer m.m.;5520
+553;Reparation och underhåll av installationer;5530
+555;Reparation och underhåll av förbrukningsinventarier;5550
+558;Underhåll och tvätt av arbetskläder;5580
+559;Övriga kostnader för reparation och underhåll;5590
+560;Kostnader för transportmedel (gruppkonto);5600
+561;Personbilskostnader;5610
+561;Personbilskostnader;5611
+561;Personbilskostnader;5612
+561;Personbilskostnader;5613
+561;Personbilskostnader;5615
+561;Personbilskostnader;5616
+561;Personbilskostnader;5619
+562;Lastbilskostnader;5620
+563;Truckkostnader;5630
+564;Kostnader för arbetsmaskiner;5640
+565;Traktorkostnader;5650
+566;Motorcykel-, moped- och skoterkostnader;5660
+567;Båt-, flygplans- och helikopterkostnader;5670
+569;Övriga kostnader för transportmedel;5690
+570;Frakter och transporter (gruppkonto);5700
+571;Frakter, transporter och försäkringar vid varudistribution;5710
+572;Tull- och speditionskostnader m.m.;5720
+573;Arbetstransporter;5730
+579;Övriga kostnader för frakter och transporter;5790
+580;Resekostnader (gruppkonto);5800
+581;Biljetter;5810
+582;Hyrbilskostnader;5820
+583;Kost och logi;5830
+583;Kost och logi;5831
+583;Kost och logi;5832
+589;Övriga resekostnader;5890
+590;Reklam och PR (gruppkonto);5900
+591;Annonsering;5910
+592;Utomhus- och trafikreklam;5920
+593;Reklamtrycksaker och direktreklam;5930
+594;Utställningar och mässor;5940
+595;Butiksreklam och återförsäljarreklam;5950
+596;Varuprover, reklamgåvor, presentreklam och tävlingar;5960
+597;Film-, radio-, TV- och Internetreklam;5970
+598;PR, institutionell reklam och sponsring;5980
+599;Övriga kostnader för reklam och PR;5990
+600;Övriga försäljningskostnader (gruppkonto);6000
+601;Kataloger, prislistor m.m.;6010
+602;Egna facktidskrifter;6020
+603;Speciella orderkostnader;6030
+604;Kontokortsavgifter;6040
+605;Försäljningsprovisioner;6050
+605;Försäljningsprovisioner;6055
+606;Kreditförsäljningskostnader;6060
+606;Kreditförsäljningskostnader;6061
+606;Kreditförsäljningskostnader;6062
+606;Kreditförsäljningskostnader;6063
+606;Kreditförsäljningskostnader;6064
+606;Kreditförsäljningskostnader;6069
+607;Representation;6070
+607;Representation;6071
+607;Representation;6072
+608;Bankgarantier;6080
+609;Övriga försäljningskostnader;6090
+610;Kontorsmateriel och trycksaker (gruppkonto);6100
+611;Kontorsmateriel;6110
+615;Trycksaker;6150
+620;Tele och post (gruppkonto);6200
+621;Telekommunikation;6210
+621;Telekommunikation;6211
+621;Telekommunikation;6212
+621;Telekommunikation;6213
+621;Telekommunikation;6214
+621;Telekommunikation;6215
+623;Datakommunikation;6230
+625;Postbefordran;6250
+630;Företagsförsäkringar och övriga riskkostnader (gruppkonto);6300
+631;Företagsförsäkringar;6310
+632;Självrisker vid skada;6320
+633;Förluster i pågående arbeten;6330
+634;Lämnade skadestånd;6340
+634;Lämnade skadestånd;6341
+634;Lämnade skadestånd;6342
+635;Förluster på kundfordringar;6350
+635;Förluster på kundfordringar;6351
+635;Förluster på kundfordringar;6352
+636;Garantikostnader;6360
+636;Garantikostnader;6361
+636;Garantikostnader;6362
+637;Kostnader för bevakning och larm;6370
+638;Förluster på övriga kortfristiga fordringar;6380
+639;Övriga riskkostnader;6390
+640;Förvaltningskostnader (gruppkonto);6400
+641;Styrelsearvoden som inte är lön;6410
+642;Ersättningar till revisor;6420
+642;Ersättningar till revisor;6421
+642;Ersättningar till revisor;6422
+642;Ersättningar till revisor;6423
+642;Ersättningar till revisor;6424
+643;Management fees;6430
+644;Årsredovisning och delårsrapporter;6440
+645;Bolagsstämma/års- eller föreningsstämma;6450
+649;Övriga förvaltningskostnader;6490
+650;Övriga externa tjänster (gruppkonto);6500
+651;Mätningskostnader;6510
+652;Ritnings- och kopieringskostnader;6520
+653;Redovisningstjänster;6530
+654;IT-tjänster;6540
+655;Konsultarvoden;6550
+655;Konsultarvoden;6551
+655;Konsultarvoden;6552
+655;Konsultarvoden;6553
+655;Konsultarvoden;6554
+655;Konsultarvoden;6555
+655;Konsultarvoden;6556
+655;Konsultarvoden;6559
+656;Serviceavgifter till branschorganisationer;6560
+657;Bankkostnader;6570
+658;Advokat- och rättegångskostnader;6580
+659;Övriga externa tjänster;6590
+680;Inhyrd personal (gruppkonto);6800
+681;Inhyrd produktionspersonal;6810
+682;Inhyrd lagerpersonal;6820
+683;Inhyrd transportpersonal;6830
+684;Inhyrd kontors- och ekonomipersonal;6840
+685;Inhyrd IT-personal;6850
+686;Inhyrd marknads- och försäljningspersonal;6860
+687;Inhyrd restaurang- och butikspersonal;6870
+688;Inhyrda företagsledare;6880
+689;Övrig inhyrd personal;6890
+690;Övriga externa kostnader (gruppkonto);6900
+691;Licensavgifter och royalties;6910
+692;Kostnader för egna patent;6920
+693;Kostnader för varumärken m.m.;6930
+694;Kontroll-, provnings- och stämpelavgifter;6940
+695;Tillsynsavgifter myndigheter;6950
+697;Tidningar, tidskrifter och facklitteratur;6970
+698;Föreningsavgifter;6980
+698;Föreningsavgifter;6981
+698;Föreningsavgifter;6982
+699;Övriga externa kostnader;6990
+699;Övriga externa kostnader;6991
+699;Övriga externa kostnader;6992
+699;Övriga externa kostnader;6993
+699;Övriga externa kostnader;6996
+699;Övriga externa kostnader;6997
+699;Övriga externa kostnader;6998
+699;Övriga externa kostnader;6999
+700;Löner till kollektivanställda (gruppkonto);7000
+701;Löner till kollektivanställda;7010
+701;Löner till kollektivanställda;7011
+701;Löner till kollektivanställda;7012
+701;Löner till kollektivanställda;7013
+701;Löner till kollektivanställda;7017
+701;Löner till kollektivanställda;7018
+701;Löner till kollektivanställda;7019
+703;Löner till kollektivanställda (utlandsanställda);7030
+703;Löner till kollektivanställda (utlandsanställda);7031
+703;Löner till kollektivanställda (utlandsanställda);7032
+703;Löner till kollektivanställda (utlandsanställda);7037
+703;Löner till kollektivanställda (utlandsanställda);7038
+703;Löner till kollektivanställda (utlandsanställda);7039
+708;Löner till kollektivanställda för ej arbetad tid;7080
+708;Löner till kollektivanställda för ej arbetad tid;7081
+708;Löner till kollektivanställda för ej arbetad tid;7082
+708;Löner till kollektivanställda för ej arbetad tid;7083
+708;Löner till kollektivanställda för ej arbetad tid;7089
+709;Förändring av semesterlöneskuld;7090
+720;Löner till tjänstemän och företagsledare (gruppkonto);7200
+721;Löner till tjänstemän;7210
+721;Löner till tjänstemän;7211
+721;Löner till tjänstemän;7212
+721;Löner till tjänstemän;7213
+721;Löner till tjänstemän;7217
+721;Löner till tjänstemän;7218
+721;Löner till tjänstemän;7219
+722;Löner till företagsledare;7220
+722;Löner till företagsledare;7221
+722;Löner till företagsledare;7222
+722;Löner till företagsledare;7227
+722;Löner till företagsledare;7228
+722;Löner till företagsledare;7229
+723;Löner till tjänstemän och ftgsledare (utlandsanställda);7230
+723;Löner till tjänstemän och ftgsledare (utlandsanställda);7231
+723;Löner till tjänstemän och ftgsledare (utlandsanställda);7232
+723;Löner till tjänstemän och ftgsledare (utlandsanställda);7237
+723;Löner till tjänstemän och ftgsledare (utlandsanställda);7238
+723;Löner till tjänstemän och ftgsledare (utlandsanställda);7239
+724;Styrelsearvoden;7240
+728;Löner till tjänstemän och företagsledare för ej arbetad tid;7280
+728;Löner till tjänstemän och företagsledare för ej arbetad tid;7281
+728;Löner till tjänstemän och företagsledare för ej arbetad tid;7282
+728;Löner till tjänstemän och företagsledare för ej arbetad tid;7283
+728;Löner till tjänstemän och företagsledare för ej arbetad tid;7284
+728;Löner till tjänstemän och företagsledare för ej arbetad tid;7285
+728;Löner till tjänstemän och företagsledare för ej arbetad tid;7286
+728;Löner till tjänstemän och företagsledare för ej arbetad tid;7288
+728;Löner till tjänstemän och företagsledare för ej arbetad tid;7289
+729;Förändring av semesterlöneskuld;7290
+729;Förändring av semesterlöneskuld;7291
+729;Förändring av semesterlöneskuld;7292
+730;Kostnadsersättningar och förmåner (gruppkonto);7300
+731;Kontanta extraersättningar;7310
+731;Kontanta extraersättningar;7311
+731;Kontanta extraersättningar;7312
+731;Kontanta extraersättningar;7313
+731;Kontanta extraersättningar;7314
+731;Kontanta extraersättningar;7315
+731;Kontanta extraersättningar;7316
+731;Kontanta extraersättningar;7317
+731;Kontanta extraersättningar;7318
+731;Kontanta extraersättningar;7319
+732;Traktamenten vid tjänsteresa;7320
+732;Traktamenten vid tjänsteresa;7321
+732;Traktamenten vid tjänsteresa;7322
+732;Traktamenten vid tjänsteresa;7323
+732;Traktamenten vid tjänsteresa;7324
+733;Bilersättningar;7330
+733;Bilersättningar;7331
+733;Bilersättningar;7332
+733;Bilersättningar;7333
+735;Ersättningar för föreskrivna arbetskläder;7350
+737;Representationsersättningar;7370
+738;Kostnader för förmåner till anställda;7380
+738;Kostnader för förmåner till anställda;7381
+738;Kostnader för förmåner till anställda;7382
+738;Kostnader för förmåner till anställda;7383
+738;Kostnader för förmåner till anställda;7384
+738;Kostnader för förmåner till anställda;7385
+738;Kostnader för förmåner till anställda;7386
+738;Kostnader för förmåner till anställda;7387
+738;Kostnader för förmåner till anställda;7388
+738;Kostnader för förmåner till anställda;7389
+739;Övriga kostnadsersättningar och förmåner;7390
+739;Övriga kostnadsersättningar och förmåner;7391
+739;Övriga kostnadsersättningar och förmåner;7392
+740;Pensionskostnader (gruppkonto);7400
+741;Pensionsförsäkringspremier;7410
+741;Pensionsförsäkringspremier;7411
+741;Pensionsförsäkringspremier;7412
+742;Förändring av pensionsskuld;7420
+743;Avdrag för räntedel i pensionskostnad;7430
+744;Förändring av pensionsstiftelsekapital;7440
+744;Förändring av pensionsstiftelsekapital;7441
+744;Förändring av pensionsstiftelsekapital;7448
+746;Pensionsutbetalningar;7460
+746;Pensionsutbetalningar;7461
+746;Pensionsutbetalningar;7462
+746;Pensionsutbetalningar;7463
+747;Förvaltnings- och kreditförsäkringsavgifter;7470
+749;Övriga pensionskostnader;7490
+750;Sociala och andra avgifter enligt lag och avtal (gruppkonto);7500
+751;Arbetsgivaravgifter 31,42 %;7510
+751;Arbetsgivaravgifter 31,42 %;7511
+751;Arbetsgivaravgifter 31,42 %;7512
+751;Arbetsgivaravgifter 31,42 %;7515
+751;Arbetsgivaravgifter 31,42 %;7516
+751;Arbetsgivaravgifter 31,42 %;7518
+751;Arbetsgivaravgifter 31,42 %;7519
+753;Särskild löneskatt;7530
+753;Särskild löneskatt;7531
+753;Särskild löneskatt;7532
+753;Särskild löneskatt;7533
+755;Avkastningsskatt på pensionsmedel;7550
+755;Avkastningsskatt på pensionsmedel;7551
+755;Avkastningsskatt på pensionsmedel;7552
+755;Avkastningsskatt på pensionsmedel;7553
+755;Avkastningsskatt på pensionsmedel;7554
+757;Premier för arbetsmarknadsförsäkringar;7570
+757;Premier för arbetsmarknadsförsäkringar;7571
+757;Premier för arbetsmarknadsförsäkringar;7572
+758;Gruppförsäkringspremier;7580
+758;Gruppförsäkringspremier;7581
+758;Gruppförsäkringspremier;7582
+758;Gruppförsäkringspremier;7583
+758;Gruppförsäkringspremier;7589
+759;Övriga sociala och andra avgifter enligt lag och avtal;7590
+760;Övriga personalkostnader (gruppkonto);7600
+761;Utbildning;7610
+762;Sjuk- och hälsovård;7620
+762;Sjuk- och hälsovård;7621
+762;Sjuk- och hälsovård;7622
+762;Sjuk- och hälsovård;7623
+763;Personalrepresentation;7630
+763;Personalrepresentation;7631
+763;Personalrepresentation;7632
+765;Sjuklöneförsäkring;7650
+767;Förändring av personalstiftelsekapital;7670
+767;Förändring av personalstiftelsekapital;7671
+767;Förändring av personalstiftelsekapital;7678
+769;Övriga personalkostnader;7690
+769;Övriga personalkostnader;7691
+769;Övriga personalkostnader;7692
+769;Övriga personalkostnader;7693
+769;Övriga personalkostnader;7699
+771;Nedskrivningar av immateriella anläggningstillgångar;7710
+772;Nedskrivningar av byggnader och mark;7720
+773;Nedskrivningar av maskiner och inventarier;7730
+774;Nedskrivningar av vissa omsättningstillgångar;7740
+776;Återföring av nedskrivningar av immateriella anläggningstillgångar;7760
+777;Återföring av nedskrivningar av byggnader och mark;7770
+778;Återföring av nedskrivningar av maskiner och inventarier;7780
+779;Återföring av nedskrivningar av vissa omsättningstillgångar;7790
+781;Avskrivningar på immateriella anläggningstillgångar;7810
+781;Avskrivningar på immateriella anläggningstillgångar;7811
+781;Avskrivningar på immateriella anläggningstillgångar;7812
+781;Avskrivningar på immateriella anläggningstillgångar;7813
+781;Avskrivningar på immateriella anläggningstillgångar;7814
+781;Avskrivningar på immateriella anläggningstillgångar;7815
+781;Avskrivningar på immateriella anläggningstillgångar;7816
+781;Avskrivningar på immateriella anläggningstillgångar;7817
+781;Avskrivningar på immateriella anläggningstillgångar;7819
+782;Avskrivningar på byggnader och markanläggningar;7820
+782;Avskrivningar på byggnader och markanläggningar;7821
+782;Avskrivningar på byggnader och markanläggningar;7824
+782;Avskrivningar på byggnader och markanläggningar;7829
+783;Avskrivningar på maskiner och inventarier;7830
+783;Avskrivningar på maskiner och inventarier;7831
+783;Avskrivningar på maskiner och inventarier;7832
+783;Avskrivningar på maskiner och inventarier;7833
+783;Avskrivningar på maskiner och inventarier;7834
+783;Avskrivningar på maskiner och inventarier;7835
+783;Avskrivningar på maskiner och inventarier;7836
+783;Avskrivningar på maskiner och inventarier;7839
+784;Avskrivningar på förbättringsutgifter på annans fastighet;7840
+794;Orealiserade positiva/negativa värdeförändringar på säkringsinstrument;7940
+796;Valutakursförluster på fordringar och skulder av rörelsekaraktär;7960
+797;Förlust vid avyttring av immateriella och materiella anläggningstillgångar;7970
+797;Förlust vid avyttring av immateriella och materiella anläggningstillgångar;7971
+797;Förlust vid avyttring av immateriella och materiella anläggningstillgångar;7972
+797;Förlust vid avyttring av immateriella och materiella anläggningstillgångar;7973
+799;Övriga rörelsekostnader;7990
+801;Utdelning på andelar i koncernföretag;8010
+801;Utdelning på andelar i koncernföretag;8012
+801;Utdelning på andelar i koncernföretag;8016
+802;Resultat vid försäljning av andelar i koncernföretag;8020
+802;Resultat vid försäljning av andelar i koncernföretag;8022
+803;Resultatandelar från handelsbolag (dotterföretag);8030
+807;Nedskrivningar av andelar i och långfristiga fordringar hos koncernföretag;8070
+807;Nedskrivningar av andelar i och långfristiga fordringar hos koncernföretag;8072
+807;Nedskrivningar av andelar i och långfristiga fordringar hos koncernföretag;8076
+807;Nedskrivningar av andelar i och långfristiga fordringar hos koncernföretag;8077
+808;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos koncernföretag;8080
+808;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos koncernföretag;8082
+808;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos koncernföretag;8086
+808;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos koncernföretag;8087
+811;Utdelningar på andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8110
+811;Utdelningar på andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8111
+811;Utdelningar på andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8112
+811;Utdelningar på andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8113
+811;Utdelningar på andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8116
+811;Utdelningar på andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8117
+811;Utdelningar på andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8118
+812;Resultat vid försäljning av andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8120
+812;Resultat vid försäljning av andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8121
+812;Resultat vid försäljning av andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8122
+812;Resultat vid försäljning av andelar i intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8123
+813;Resultatandelar från handelsbolag (intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i);8130
+813;Resultatandelar från handelsbolag (intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i);8131
+813;Resultatandelar från handelsbolag (intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i);8132
+813;Resultatandelar från handelsbolag (intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i);8133
+817;Nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8170
+817;Nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8171
+817;Nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8172
+817;Nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8173
+817;Nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8174
+817;Nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8176
+817;Nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag, gemensamt styrda företag och övriga företag som det finns ett ägarintresse i;8177
+818;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag;8180
+818;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag;8181
+818;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag;8182
+818;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag;8183
+818;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag;8184
+818;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag;8186
+818;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos intresseföretag;8187
+821;Utdelningar på andelar i andra företag;8210
+821;Utdelningar på andelar i andra företag;8212
+821;Utdelningar på andelar i andra företag;8216
+822;Resultat vid försäljning av värdepapper i och långfristiga fordringar hos andra företag;8220
+822;Resultat vid försäljning av värdepapper i och långfristiga fordringar hos andra företag;8221
+822;Resultat vid försäljning av värdepapper i och långfristiga fordringar hos andra företag;8222
+822;Resultat vid försäljning av värdepapper i och långfristiga fordringar hos andra företag;8223
+823;Valutakursdifferenser på långfristiga fordringar;8230
+823;Valutakursdifferenser på långfristiga fordringar;8231
+823;Valutakursdifferenser på långfristiga fordringar;8236
+824;Resultatandelar från handelsbolag (andra företag);8240
+825;Ränteintäkter från långfristiga fordringar hos och värdepapper i andra företag;8250
+825;Ränteintäkter från långfristiga fordringar hos och värdepapper i andra företag;8251
+825;Ränteintäkter från långfristiga fordringar hos och värdepapper i andra företag;8252
+825;Ränteintäkter från långfristiga fordringar hos och värdepapper i andra företag;8254
+825;Ränteintäkter från långfristiga fordringar hos och värdepapper i andra företag;8255
+826;Ränteintäkter från långfristiga fordringar hos koncernföretag;8260
+826;Ränteintäkter från långfristiga fordringar hos koncernföretag;8261
+826;Ränteintäkter från långfristiga fordringar hos koncernföretag;8262
+826;Ränteintäkter från långfristiga fordringar hos koncernföretag;8263
+827;Nedskrivningar av innehav av andelar i och långfristiga fordringar hos andra företag;8270
+827;Nedskrivningar av innehav av andelar i och långfristiga fordringar hos andra företag;8271
+827;Nedskrivningar av innehav av andelar i och långfristiga fordringar hos andra företag;8272
+827;Nedskrivningar av innehav av andelar i och långfristiga fordringar hos andra företag;8273
+828;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos andra företag;8280
+828;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos andra företag;8281
+828;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos andra företag;8282
+828;Återföringar av nedskrivningar av andelar i och långfristiga fordringar hos andra företag;8283
+829;Värdering till verkligt värde, anläggningstillgångar;8290
+829;Värdering till verkligt värde, anläggningstillgångar;8291
+829;Värdering till verkligt värde, anläggningstillgångar;8295
+831;Ränteintäkter från omsättningstillgångar;8310
+831;Ränteintäkter från omsättningstillgångar;8311
+831;Ränteintäkter från omsättningstillgångar;8312
+831;Ränteintäkter från omsättningstillgångar;8313
+831;Ränteintäkter från omsättningstillgångar;8314
+831;Ränteintäkter från omsättningstillgångar;8317
+831;Ränteintäkter från omsättningstillgångar;8319
+832;Värdering till verkligt värde, omsättningstillgångar;8320
+832;Värdering till verkligt värde, omsättningstillgångar;8321
+832;Värdering till verkligt värde, omsättningstillgångar;8325
+833;Valutakursdifferenser på kortfristiga fordringar och placeringar;8330
+833;Valutakursdifferenser på kortfristiga fordringar och placeringar;8331
+833;Valutakursdifferenser på kortfristiga fordringar och placeringar;8336
+834;Utdelningar på kortfristiga placeringar;8340
+835;Resultat vid försäljning av kortfristiga placeringar;8350
+836;Övriga ränteintäkter från koncernföretag;8360
+836;Övriga ränteintäkter från koncernföretag;8361
+836;Övriga ränteintäkter från koncernföretag;8362
+836;Övriga ränteintäkter från koncernföretag;8363
+837;Nedskrivningar av kortfristiga placeringar;8370
+838;Återföringar av nedskrivningar av kortfristiga placeringar;8380
+839;Övriga finansiella intäkter;8390
+840;Räntekostnader (gruppkonto);8400
+841;Räntekostnader för långfristiga skulder;8410
+841;Räntekostnader för långfristiga skulder;8411
+841;Räntekostnader för långfristiga skulder;8412
+841;Räntekostnader för långfristiga skulder;8413
+841;Räntekostnader för långfristiga skulder;8415
+841;Räntekostnader för långfristiga skulder;8417
+841;Räntekostnader för långfristiga skulder;8418
+841;Räntekostnader för långfristiga skulder;8419
+842;Räntekostnader för kortfristiga skulder;8420
+842;Räntekostnader för kortfristiga skulder;8421
+842;Räntekostnader för kortfristiga skulder;8422
+842;Räntekostnader för kortfristiga skulder;8423
+842;Räntekostnader för kortfristiga skulder;8424
+842;Räntekostnader för kortfristiga skulder;8429
+843;Valutakursdifferenser på skulder;8430
+843;Valutakursdifferenser på skulder;8431
+843;Valutakursdifferenser på skulder;8436
+844;Erhållna räntebidrag;8440
+845;Orealiserade värdeförändringar på skulder;8450
+845;Orealiserade värdeförändringar på skulder;8451
+845;Orealiserade värdeförändringar på skulder;8455
+846;Räntekostnader till koncernföretag;8460
+846;Räntekostnader till koncernföretag;8461
+846;Räntekostnader till koncernföretag;8462
+846;Räntekostnader till koncernföretag;8463
+848;Aktiverade ränteutgifter;8480
+849;Övriga skuldrelaterade poster;8490
+849;Övriga skuldrelaterade poster;8491
+881;Förändring av periodiseringsfond;8810
+881;Förändring av periodiseringsfond;8811
+881;Förändring av periodiseringsfond;8819
+882;Mottagna koncernbidrag;8820
+883;Lämnade koncernbidrag;8830
+884;Lämnade gottgörelser;8840
+885;Förändring av överavskrivningar;8850
+885;Förändring av överavskrivningar;8851
+885;Förändring av överavskrivningar;8852
+885;Förändring av överavskrivningar;8853
+886;Förändring av ersättningsfond;8860
+886;Förändring av ersättningsfond;8861
+886;Förändring av ersättningsfond;8862
+886;Förändring av ersättningsfond;8864
+886;Förändring av ersättningsfond;8865
+886;Förändring av ersättningsfond;8866
+886;Förändring av ersättningsfond;8869
+889;Övriga bokslutsdispositioner;8890
+889;Övriga bokslutsdispositioner;8892
+889;Övriga bokslutsdispositioner;8896
+889;Övriga bokslutsdispositioner;8899
+891;Skatt som belastar årets resultat;8910
+892;Skatt på grund av ändrad beskattning;8920
+893;Restituerad skatt;8930
+894;Uppskjuten skatt;8940
+898;Övriga skatter;8980
+899;Resultat;8990
+899;Resultat;8999

@@ -1,0 +1,81 @@
+AccountClassId;Id;Name
+1;10;Immateriella anläggningstillgångar
+1;11;Byggnader och mark
+1;12;Maskiner och inventarier
+1;13;Finansiella anläggningstillgångar
+1;14;Lager, produkter i arbete och pågående arbeten
+1;15;Kundfordringar
+1;16;Övriga kortfristiga fordringar
+1;17;Förutbetalda kostnader och upplupna intäkter
+1;18;Kortfristiga placeringar
+1;19;Kassa och bank
+2;20;Eget kapital
+2;21;Obeskattade reserver
+2;22;Avsättningar
+2;23;Långfristiga skulder
+2;24;Kortfristiga skulder till kreditinstitut, kunder och leverantörer
+2;25;Skatteskulder
+2;26;Moms och särskilda punktskatter
+2;27;Personalens skatter, avgifter och löneavdrag
+2;28;Övriga kortfristiga skulder
+2;29;Upplupna kostnader och förutbetalda intäkter
+3;30;Huvudintäkter
+3;31;Huvudintäkter
+3;32;Huvudintäkter
+3;33;Huvudintäkter
+3;34;Huvudintäkter
+3;35;Fakturerade kostnader
+3;36;Rörelsens sidointäkter
+3;37;Intäktskorrigeringar
+3;38;Aktiverat arbete för egen räkning
+3;39;Övriga rörelseintäkter
+4;40;Inköp av varor och material
+4;41;Inköp av varor och material
+4;42;Inköp av varor och material
+4;43;Inköp av varor och material
+4;44;Inköp av varor och material
+4;45;Inköp av varor och material
+4;46;Legoarbeten, underentreprenader
+4;47;Reduktion av inköpspriser
+4;48;(Fri kontogrupp)
+4;49;Förändring av lager, produkter i arbete och pågående arbeten
+5;50;Lokalkostnader
+5;51;Fastighetskostnader
+5;52;Hyra av anläggningstillgångar
+5;53;Energikostnader
+5;54;Förbrukningsinventarier och förbrukningsmaterial
+5;55;Reparation och underhåll
+5;56;Kostnader för transportmedel
+5;57;Frakter och transporter
+5;58;Resekostnader
+5;59;Reklam och PR
+6;60;Övriga försäljningskostnader
+6;61;Kontorsmateriel och trycksaker
+6;62;Tele och post
+6;63;Företagsförsäkringar och övriga riskkostnader
+6;64;Förvaltningskostnader
+6;65;Övriga externa tjänster
+6;66;(Fri kontogrupp)
+6;67;(Fri kontogrupp)
+6;68;Inhyrd personal
+6;69;Övriga externa kostnader
+7;70;Löner till kollektivanställda
+7;71;(Fri kontogrupp)
+7;72;Löner till tjänstemän och företagsledare
+7;73;Kostnadsersättningar och förmåner
+7;74;Pensionskostnader
+7;75;Sociala och andra avgifter enligt lag och avtal
+7;76;Övriga personalkostnader
+7;77;Nedskrivningar och återföring av nedskrivningar
+7;78;Avskrivningar enligt plan
+7;79;Övriga rörelsekostnader
+8;80;Resultat från andelar i koncernföretag
+8;81;Resultat från andelar i intresseföretag
+8;82;Resultat från övriga värdepapper och långfristiga fordringar (anläggningstillgångar)
+8;83;Övriga ränteintäkter och liknande resultatposter
+8;84;Räntekostnader och liknande resultatposter
+8;85;(Fri kontogrupp)
+8;86;(Fri kontogrupp)
+8;87;(Fri kontogrupp)
+8;88;Bokslutsdispositioner
+8;89;Skatter och årets resultat

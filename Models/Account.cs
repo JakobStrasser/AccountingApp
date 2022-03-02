@@ -12,7 +12,7 @@ namespace AccountingApp.Models
        
         public int Id { get; set; }
         public int AccountNumber { get; set; }
-        public int? CompanyId { get; set; }
+        public int CompanyId { get; set; }
         public Company Company { get; set; }
         public string Name { get; set; }
         public bool Standard { get; set; }

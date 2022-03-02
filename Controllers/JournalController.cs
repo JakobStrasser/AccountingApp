@@ -50,9 +50,8 @@ namespace AccountingApp.Controllers
             {
                 journals.Add(new SelectListItem { Value = j.Id.ToString(), Text = j.Name });
             }
-
           
-
+            //Return view with model
             return View(new JournalViewModel
             {
                 Company = company,
@@ -82,10 +81,8 @@ namespace AccountingApp.Controllers
                 Journal journal = await _context.Journals.FindAsync(int.Parse(model.SelectedJournal));
                 await _context.Entry(journal).Collection(j => j.JournalEntries).LoadAsync();
 
-                //Create journalentry & ledgerentries
-            
-                JournalEntry journalEntry = new JournalEntry { Company = company, AccountingYear = accountingYear, Date = model.SelectedDate, Active = true, Rows = new List<LedgerEntry>(),Name = model.Text };         
-                //var result =+ await _context.SaveChangesAsync();
+                //Create journalentry & ledgerentries            
+                JournalEntry journalEntry = new JournalEntry { Company = company, AccountingYear = accountingYear, Date = model.SelectedDate, Active = true, Rows = new List<LedgerEntry>(),Name = model.Text };                   
  
                 journal.JournalEntries.Add(journalEntry);
                 //result = +await _context.SaveChangesAsync();
