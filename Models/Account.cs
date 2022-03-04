@@ -17,8 +17,9 @@ namespace AccountingApp.Models
         public string Name { get; set; }
         public bool Standard { get; set; }
         public bool Used { get; set; }
-        public int AccountGroupId { get; set; }
-        public AccountGroup AccountGroup { get; set; }
-      
+        public int AccountGroupNumber { get; set; }
+        public string AccountGroupName { get; set; }
+        public int AccountClassNumber { get; set; }
+        public string AccountClassName { get; set; }
     }
 }

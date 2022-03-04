@@ -26,7 +26,16 @@ namespace AccountingApp.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AccountGroupId")
+                    b.Property<string>("AccountClassName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("AccountClassNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AccountGroupName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("AccountGroupNumber")
                         .HasColumnType("int");
 
                     b.Property<int>("AccountNumber")
@@ -46,62 +55,9 @@ namespace AccountingApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AccountGroupId");
-
                     b.HasIndex("CompanyId");
 
                     b.ToTable("Accounts");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.AccountClass", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("AccountClassNumber")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CompanyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CompanyId");
-
-                    b.ToTable("AccountClasses");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.AccountGroup", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("AccountClassId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AccountGroupNumber")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CompanyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AccountClassId");
-
-                    b.HasIndex("CompanyId");
-
-                    b.ToTable("AccountGroups");
                 });
 
             modelBuilder.Entity("AccountingApp.Models.AccountingYear", b =>
@@ -149,60 +105,6 @@ namespace AccountingApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Companies");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.Dimension", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("CompanyId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DimensionNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CompanyId");
-
-                    b.ToTable("Dimensions");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.DimensionItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("CompanyId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DimensionId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CompanyId");
-
-                    b.HasIndex("DimensionId");
-
-                    b.ToTable("DimensionItems");
                 });
 
             modelBuilder.Entity("AccountingApp.Models.Journal", b =>
@@ -271,7 +173,7 @@ namespace AccountingApp.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AccountId")
+                    b.Property<int>("AccountId")
                         .HasColumnType("int");
 
                     b.Property<bool>("Active")
@@ -306,8 +208,6 @@ namespace AccountingApp.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("DimensionItemId");
 
                     b.HasIndex("LedgerEntryId");
 
@@ -534,43 +434,11 @@ namespace AccountingApp.Migrations
 
             modelBuilder.Entity("AccountingApp.Models.Account", b =>
                 {
-                    b.HasOne("AccountingApp.Models.AccountGroup", "AccountGroup")
-                        .WithMany("Accounts")
-                        .HasForeignKey("AccountGroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("AccountingApp.Models.Company", "Company")
                         .WithMany("Accounts")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("AccountGroup");
-
-                    b.Navigation("Company");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.AccountClass", b =>
-                {
-                    b.HasOne("AccountingApp.Models.Company", "Company")
-                        .WithMany("AccountClasses")
-                        .HasForeignKey("CompanyId");
-
-                    b.Navigation("Company");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.AccountGroup", b =>
-                {
-                    b.HasOne("AccountingApp.Models.AccountClass", null)
-                        .WithMany("AccountGroups")
-                        .HasForeignKey("AccountClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AccountingApp.Models.Company", "Company")
-                        .WithMany("AccountGroups")
-                        .HasForeignKey("CompanyId");
 
                     b.Navigation("Company");
                 });
@@ -582,32 +450,6 @@ namespace AccountingApp.Migrations
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.Dimension", b =>
-                {
-                    b.HasOne("AccountingApp.Models.Company", "Company")
-                        .WithMany("Dimensions")
-                        .HasForeignKey("CompanyId");
-
-                    b.Navigation("Company");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.DimensionItem", b =>
-                {
-                    b.HasOne("AccountingApp.Models.Company", "Company")
-                        .WithMany()
-                        .HasForeignKey("CompanyId");
-
-                    b.HasOne("AccountingApp.Models.Dimension", "Dimension")
-                        .WithMany("DimensionItems")
-                        .HasForeignKey("DimensionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Company");
-
-                    b.Navigation("Dimension");
                 });
 
             modelBuilder.Entity("AccountingApp.Models.Journal", b =>
@@ -646,7 +488,9 @@ namespace AccountingApp.Migrations
                 {
                     b.HasOne("AccountingApp.Models.Account", "Account")
                         .WithMany()
-                        .HasForeignKey("AccountId");
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("AccountingApp.Models.JournalEntry", null)
                         .WithMany("Rows")
@@ -659,10 +503,6 @@ namespace AccountingApp.Migrations
 
             modelBuilder.Entity("AccountingApp.Models.ObjectReference", b =>
                 {
-                    b.HasOne("AccountingApp.Models.DimensionItem", null)
-                        .WithMany("TransactionRowDimensions")
-                        .HasForeignKey("DimensionItemId");
-
                     b.HasOne("AccountingApp.Models.LedgerEntry", null)
                         .WithMany("ObjectReferences")
                         .HasForeignKey("LedgerEntryId");
@@ -719,41 +559,15 @@ namespace AccountingApp.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("AccountingApp.Models.AccountClass", b =>
-                {
-                    b.Navigation("AccountGroups");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.AccountGroup", b =>
-                {
-                    b.Navigation("Accounts");
-                });
-
             modelBuilder.Entity("AccountingApp.Models.Company", b =>
                 {
-                    b.Navigation("AccountClasses");
-
-                    b.Navigation("AccountGroups");
-
                     b.Navigation("AccountingYears");
 
                     b.Navigation("Accounts");
 
-                    b.Navigation("Dimensions");
-
                     b.Navigation("Journals");
 
                     b.Navigation("Transactions");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.Dimension", b =>
-                {
-                    b.Navigation("DimensionItems");
-                });
-
-            modelBuilder.Entity("AccountingApp.Models.DimensionItem", b =>
-                {
-                    b.Navigation("TransactionRowDimensions");
                 });
 
             modelBuilder.Entity("AccountingApp.Models.Journal", b =>

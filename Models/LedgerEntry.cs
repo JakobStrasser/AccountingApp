@@ -10,7 +10,7 @@ namespace AccountingApp.Models
         public int Id { get; set; }
 
         public int JournalEntryId { get; set; }
-        public int? AccountId { get; set; }
+        public int AccountId { get; set; }
         public Account Account { get; set; }
         public double Value { get; set; }
         public bool Active { get; set; }

@@ -96,20 +96,10 @@ namespace AccountingApp.Controllers
         /// </summary>
         /// <param name="company"></param>
         private void SetupCompanyData(Company company, DateTime start, DateTime end)
-        {            
-            AddAccountClasses(_context, company);
-            _context.SaveChanges();
-
-            AddAccountGroups(_context,  company);
-            _context.SaveChanges();
-
-            //AddDimensions(_context);
-            //await _context.SaveChangesAsync();
-
+        {          
             AddAccounts(_context, company);
             _context.SaveChanges();
-
-            
+    
             _context.Journals.Add(new Journal { CompanyId = company.Id, Name = "Huvudbok", Active = true, JournalEntries = new List<JournalEntry>() });
             _context.AccountingYears.Add(new AccountingYear { CompanyId = company.Id, StartDate = start, EndDate = end });
             _context.SaveChanges();
@@ -194,40 +184,37 @@ namespace AccountingApp.Controllers
             //Delete journals, journalentry,  ledgerentry
             List<Journal> journals = await _context.Journals.Include(j => j.JournalEntries).Where(j => j.CompanyId == id).ToListAsync();
             foreach (Journal j in journals)
-            {                
-                foreach (JournalEntry je in j.JournalEntries)
+            {
+                List<JournalEntry> journalEntries = await _context.JournalEntry.Where(je => je.JournalId == j.Id).ToListAsync();
+                foreach (JournalEntry je in journalEntries)
                 {
-                    foreach (LedgerEntry le in je.Rows)
+                    List<LedgerEntry> ledgerEntries = await _context.LedgerEntries.Where(le => le.JournalEntryId == je.Id).ToListAsync();
+                    foreach (LedgerEntry le in ledgerEntries)
                         _context.LedgerEntries.Remove(le);
                     _context.JournalEntry.Remove(je);
                 }
                 _context.Journals.Remove(j);
+                await _context.SaveChangesAsync();
             }
-            //Account classes, groups, accounts
-            List<AccountClass> accountClasses = await _context.AccountClasses.Include(ac => ac.AccountGroups).Where(ac => ac.CompanyId == id).ToListAsync();
-            foreach (AccountClass ac in accountClasses)
+            //Accounts
+            List<Account> accounts = await _context.Accounts.Where(a => a.CompanyId == id).ToListAsync();
+            foreach (Account a in accounts)
             {
-                foreach(AccountGroup ag in ac.AccountGroups)
-                {
-                    List<Account> accounts = await _context.Accounts.Where(a => a.AccountGroupId == ag.Id && a.CompanyId == id).ToListAsync();
-                    foreach (Account a in accounts)
-                    {
-                        _context.Accounts.Remove(a);
-                    }
-                    _context.AccountGroups.Remove(ag);
-                }
-                _context.AccountClasses.Remove(ac);
+                _context.Accounts.Remove(a);
             }
+            await _context.SaveChangesAsync();
 
-            //Accounting year
+            //Accounting years
             List<AccountingYear> accountingYears = await _context.AccountingYears.Where(ay => ay.CompanyId == id).ToListAsync();
             foreach (AccountingYear ay in accountingYears)
                 _context.AccountingYears.Remove(ay);
+            await _context.SaveChangesAsync();
 
             //User company link
             List<UserCompany> userCompanies = await _context.UserCompanies.Where(uc => uc.CompanyId == id).ToListAsync();
             foreach (UserCompany uc in userCompanies)
                 _context.UserCompanies.Remove(uc);
+             await _context.SaveChangesAsync();
 
             _context.Companies.Remove(company);
             await _context.SaveChangesAsync();
@@ -239,85 +226,34 @@ namespace AccountingApp.Controllers
             return _context.Companies.Any(e => e.Id == id);
         }
 
-        private  void AddDimensions(ApplicationDbContext dbContext)
-        {
-            string[] accountLines = System.IO.File.ReadAllLines(rootPath + "/csv/dimension.csv");
-            for (int i = 1; i < accountLines.Length; i++)
-            {
-                string[] split = accountLines[i].Split(";");
-
-
-                int id = int.Parse(split[0]);
-                string dimensionName = split[1];
-
-                dbContext.Dimensions.Add(new Dimension { CompanyId = 1, DimensionNumber = id, Name = dimensionName, Active = false });
-                Console.WriteLine("Added " + split[0] + " - " + split[1]);
-
-            }
-
-        }
-
-
-
         private  void AddAccounts(ApplicationDbContext dbContext, Company company)
         {
             string[] accountLines = System.IO.File.ReadAllLines(rootPath +"/csv/konton.csv");
-
-            var accountGroups = dbContext.AccountGroups.ToList();
-
+         
+            //Id;Name;AccountClassNumber;AccountClassName;AccountGroupNumber;AccountGroupName;Standard
 
             for (int i = 1; i < accountLines.Length; i++)
             {
                 string[] split = accountLines[i].Split(";");
 
-                int accountGroupId = int.Parse(split[1]);
-                int accountGroup = accountGroups.Find(ag => ag.CompanyId == company.Id && ag.AccountGroupNumber == accountGroupId).Id;
+                int accountClassNumber = int.Parse(split[2]);
+                string accountClassName = split[3];
+                int accountGroupNumber = int.Parse(split[4]);
+                string accountGroupName = split[5];
 
-                int categoryId = int.Parse(split[2]);
 
-                int id = int.Parse(split[4]);
-                string name = split[5];
+                int id = int.Parse(split[0]);
+                string name = split[1];
                 bool standard = bool.Parse(split[6]);
 
-                dbContext.Accounts.Add(new Account { CompanyId = company.Id, AccountNumber = id, AccountGroupId = accountGroup, Name = name, Standard = standard, Used = false });
+                dbContext.Accounts.Add(new Account { CompanyId = company.Id, AccountNumber = id, Name = name,AccountClassNumber = accountClassNumber, AccountClassName = accountClassName, AccountGroupNumber = accountGroupNumber,AccountGroupName = accountGroupName, Standard = standard, Used = false });
                 Console.WriteLine("Added " + split);
 
             }
         }
 
-        private  void AddAccountGroups(ApplicationDbContext dbContext, Company company)
-        {
-            string[] accountGroupLines = System.IO.File.ReadAllLines(rootPath + "/csv/kontogrupp.csv");
+       
 
-            List<AccountClass> accountClasses = dbContext.AccountClasses.ToList();
-
-            for (int i = 1; i < accountGroupLines.Length; i++)
-            {
-                string[] split = accountGroupLines[i].Split(";");
-
-                var accountClassId = accountClasses.Find(ac => ac.AccountClassNumber == int.Parse(split[0])).Id;
-
-                dbContext.AccountGroups.Add(new AccountGroup { CompanyId = company.Id, AccountGroupNumber = int.Parse(split[1]), Name = split[2], AccountClassId = accountClassId });
-
-                Console.WriteLine("Added " + split[0] + " - " + split[1] + " - " + split[2]);
-
-            }
-        }
-
-        private  void AddAccountClasses(ApplicationDbContext dbContext, Company company)
-        {
-            string[] accountClassLines = System.IO.File.ReadAllLines(rootPath + "/csv/kontoklass.csv");
-
-            for (int i = 1; i < accountClassLines.Length; i++)
-            {
-                string[] split = accountClassLines[i].Split(";");
-
-                if (int.TryParse(split[0], out int id))
-                    dbContext.AccountClasses.Add(new AccountClass { CompanyId = company.Id, AccountClassNumber = id, Name = split[1] });
-                dbContext.SaveChanges();
-                Console.WriteLine("Added " + split[0] + " - " + split[1]);
-
-            }
-        }
+       
     }
 }

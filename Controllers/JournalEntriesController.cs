@@ -25,7 +25,28 @@ namespace AccountingApp.Controllers
         // GET: JournalEntries
         public async Task<IActionResult> Index()
         {
-            return View(await _context.JournalEntry.ToListAsync());
+            List<JournalEntry> journalEntries = await _context.JournalEntry.Include(je => je.Rows).OrderBy(je => je.Date).ToListAsync();
+            List<JournalEntriesListViewModel> journalEntriesListViewModels = new List<JournalEntriesListViewModel>();
+            foreach(JournalEntry je in journalEntries)
+            {
+                JournalEntriesListViewModel currentJournalEntry = new JournalEntriesListViewModel { JournalEntry = je, CreditSum = 0, DebitSum = 0, Rows = new List<JournalEntriesListViewModelRow>() };
+                List<LedgerEntry> currentRows = await _context.LedgerEntries.Where(le => le.JournalEntryId == je.Id).ToListAsync();
+                foreach (LedgerEntry le in currentRows)
+                {
+                    double debit = (le.Value >= 0) ? Math.Abs(le.Value) : 0;
+                    double credit = (le.Value >= 0) ? 0 : Math.Abs(le.Value);
+
+                    currentJournalEntry.DebitSum += debit;
+                    currentJournalEntry.CreditSum += credit;
+
+                    Account account = await _context.Accounts.FindAsync(le.AccountId);
+
+
+                  currentJournalEntry.Rows.Add(new JournalEntriesListViewModelRow { AccountName = account.Name, AccountNumber = account.AccountNumber, Debit = debit, Credit = credit });
+                }
+                journalEntriesListViewModels.Add(currentJournalEntry);
+            }
+            return View(journalEntriesListViewModels);
         }
 
         // GET: JournalEntries/Details/5
