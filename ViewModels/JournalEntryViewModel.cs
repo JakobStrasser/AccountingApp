@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AccountingApp.ViewModels
 {
-    public class JournalViewModel
+    public class JournalEntryViewModel
     {
         public Company Company { get; set; }
         public Dictionary<int, string> Accounts { get; set; }

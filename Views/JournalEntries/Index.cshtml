@@ -1,5 +1,4 @@
-﻿using AccountingApp.ViewModels;
-@model IEnumerable<AccountingApp.ViewModels.JournalEntriesListViewModel>
+﻿@model IEnumerable<AccountingApp.ViewModels.JournalEntriesListViewModel>
 
 @{
     ViewData["Title"] = "Lista verifikat";
@@ -12,7 +11,7 @@
 {
 
     <p>
-        <a asp-action="Edit" asp-controller="Journal" asp-route-id="@item.JournalEntry.Id">@item.JournalEntry.Id - @item.JournalEntry.Name - @item.JournalEntry.Date.ToShortDateString() </a> |
+        <a asp-action="Edit" asp-controller="JournalEntries" asp-route-id="@item.JournalEntry.Id">@item.JournalEntry.Id - @item.JournalEntry.Name - @item.JournalEntry.Date.ToShortDateString() </a> |
     </p>
     <table>
         <thead>

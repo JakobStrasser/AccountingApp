@@ -62,7 +62,10 @@ namespace AccountingApp.Controllers
                 return NotFound();
             }
 
-            return View(company);
+            List<AccountingYear> years = await _context.AccountingYears.Where(ay => ay.CompanyId == id).OrderBy(ay => ay.StartDate).ToListAsync();
+            List<Journal> journals = await _context.Journals.Where(j => j.CompanyId == id).ToListAsync();
+
+            return View(new CompanyDetailsViewModel { Company = company, AccountingYears = years, Journals = journals});
         }
 
         // GET: Companies/Create

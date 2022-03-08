@@ -8,6 +8,7 @@ namespace AccountingApp.ViewModels
     public class SubmitViewModel
     {
         public int? JournalEntryId { get; set; }
+        public int? CompanyId { get; set; }
         public string Status { get; set; }
     }
 }

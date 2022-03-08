@@ -1,0 +1,38 @@
+﻿@using AccountingApp.ViewModels
+@model ReportViewModel
+
+<div id="accordion">
+    @foreach (AccountingYear year in Model.Reports.Keys)
+    {
+        <div class="card">
+            <div class="card-header">
+                <h3>@year.StartDate.ToShortDateString() - @year.EndDate.ToShortDateString()</h3>
+            </div>
+            @foreach (IGrouping<string, Account> accountGrouping in Model.Accounts.GroupBy(a => a.AccountClassName))
+            {
+
+                <div class="card-body">
+                    <h4>@accountGrouping.Key</h4>
+                    @{
+                        double accountGroupSum = 0;
+                    }
+                    @foreach (Account account in accountGrouping)
+                    {
+                        @if (@Model.Reports[year].LedgerEntriesPerAccount.ContainsKey(account))
+                        {
+                            <div class="d-flex">
+                                <span>@account.AccountNumber - @account.Name </span>
+                                <span>@Model.Reports[year].LedgerEntriesPerAccount[account].Sum(le => le.Value)</span>
+                                @{
+                                    accountGroupSum += Model.Reports[year].LedgerEntriesPerAccount[account].Sum(le => le.Value);
+                                }
+                            </div>}
+                    }
+                    <h4>Summa - @accountGroupSum</h4>
+                </div>
+
+            }
+        </div>
+    }
+</div>
+

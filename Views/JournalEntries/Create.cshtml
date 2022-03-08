@@ -1,43 +1,215 @@
-﻿@model AccountingApp.Models.JournalEntry
+﻿@using AccountingApp.ViewModels;
+@model JournalEntryViewModel
 
-@{
-    ViewData["Title"] = "Create";
-}
 
-<h1>Create</h1>
 
-<h4>JournalEntry</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
-                <span asp-validation-for="Date" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<form asp-controller="JournalEntries" asp-action="Create" id="JournalForm" method="post">
+    <div>
+        <label name="yearLabel">Välj bokföringsår</label>
+        <select id="AccountingYear" asp-for="SelectedAccountingYear" asp-items="@Model.AccountingYearsList" onchange="ChangeYear(this)"></select>
     </div>
-</div>
+    <div>
+        <label name="dateLabel">Välj bokföringsdatum</label>
+        <input asp-for="SelectedDate" type="date" value="@DateTime.Today.ToShortDateString()" />
+    </div>
+    <div>
+        <label>Välj journal</label>
+        <select id="JournalSelect" asp-for="SelectedJournal" asp-items="@Model.JournalsList"></select>
+    </div>
+    <div>
+        <label>Verifikationstext:</label>
+        <input asp-for="Text" type="text" />
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Konto</th>
+                <th>Debit</th>
+                <th>Kredit</th>
+            </tr>
+        </thead>
+        <tbody id="JournalFormBody">
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+            @for (int i = 0; i < 100; i++)
+            {
+                <tr id="Row_@i" class="d-none">
+                    <td>
+                        <input asp-for="Rows[i].AccountNumber" type="text" onchange="SelectAccount(this, @i)" />
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+                    </td>
+                    <td>
+                        <label id="Rows_AccountName__@i">Kontonamn</label>
+                    </td>
+                    <td>
+                        <input asp-for="Rows[i].Debit" onchange="ValidateRow(this, @i)" type="text" />
+                    </td>
+                    <td>
+                        <input asp-for="Rows[i].Credit" onchange="ValidateRow(this, @i)" type="text" />
+                    </td>
+
+                    <td>
+                        <input type="button" onclick="RemoveRow(this, @i)" value="Ta bort" />
+                    </td>
+                    <td>
+                        <label id="Rows_Warning_@i"></label>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><label id="SumLabel">Summa</label></td>
+                <td><label id="DebitSum"></label></td>
+                <td><label id="CreditSum"></label></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="AddRowButton" onclick="AddRowButtonClicked(this)" value="+" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input asp-for="RowsUsed" type="hidden" value="0" />
+                    <input type="submit" asp-route-companyId="@Model.Company.Id" name="SubmitFormButton" value="Bokför" />
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+
+<script>
+    //Get list of accounts for account searching
+    const Accounts = JSON.parse('@Html.Raw(Json.Serialize(Model.Accounts))');
+    let AccountSearchSource = [];
+
+    for (let key in Accounts) {
+        AccountSearchSource.push({ 'label': key + " - "+ Accounts[key], 'value': key });
+    }
+
+    for (let i = 0; i < 100; i++) {
+        $("#Rows_" + i + "__AccountNumber").autocomplete({ source: AccountSearchSource });
+    }
+
+    //Set index of rows visible
+    let NumberOfRows = 0;
+
+    //Show 2 rows when starting
+    for (let i = 0; i < 2; i++) {
+        let rowToShowId = "#Row_" + NumberOfRows;
+        AddRowButtonClicked($(rowToShowId))
+    }
+
+    //Parse AccountingYears
+    let Years = JSON.parse('@Html.Raw(Json.Serialize(Model.AccountingYears))');
+
+    //Limit start & end date for datepicker
+    $("#SelectedDate").attr({ "min": '@Model.SelectedAccountingYearStartDate.ToShortDateString()' });
+    $("#SelectedDate").attr({ "max": '@Model.SelectedAccountingYearEndDate.ToShortDateString()' });
+
+    //Shows a new row
+    function AddRowButtonClicked(object) {
+
+        NumberOfRows++;
+        let rowToShowId = "#Row_" + NumberOfRows;
+
+        $(rowToShowId).toggleClass('d-none');
+        $("#RowsUsed").val(NumberOfRows);
+        UpdateSum();
+    }
+
+    //Check if current value exists as key in Accounts, populate account_name label for row
+    function SelectAccount(object, row) {
+        let currentRowName = "#Rows_AccountName__" + row;
+        let currentValue = $("#Rows_" + row + "__AccountNumber").val();
+        console.log(currentRowName + " - " + currentValue + " - " + Accounts[currentValue])
+        if (Accounts[currentValue] !== null) {
+            $(currentRowName).text(Accounts[currentValue]);
+        }
+    }
+
+    //Changes min & max of datepicker when selecting accounting year
+    function ChangeYear(object) {
+        const yearValue = object.value;
+
+        for (let y = 0; y < Years.length; y++) {
+            //console.log(yearValue + " " + (Years[y]['id'] == yearValue));
+            if (Years[y]['id'] == yearValue) {
+                let minDate = new Date(Years[y]['startDate']);
+                let maxDate = new Date(Years[y]['endDate'])
+
+                $("#SelectedDate").attr({ "min": minDate.toLocaleDateString() });
+                $("#SelectedDate").attr({ "max": maxDate.toLocaleDateString()});
+                console.log($("#SelectedDate").attr('min'));
+                console.log($("#SelectedDate").attr('max'));
+            }
+        }
+    }
+
+    //Moves every row below up one and clears and hides the last row
+    function RemoveRow(object, row) {
+
+        for (let i = row; i < NumberOfRows; i++) {
+
+            $("#Rows_" + i + "__AccountNumber").val($("#Rows_" + (i + 1) + "__AccountNumber").val());
+            SelectAccount($("#Rows_" + i + "__AccountNumber"), i);
+
+            $("#Rows_" + i + "__Credit").val($("#Rows_" + (i + 1) + "__Credit").val());
+            $("#Rows_" + i + "__Credit").val($("#Rows_" + (i + 1) + "__Debit").val());
+        }
+        $("#Rows_" + NumberOfRows + "__AccountNumber").val("");
+        SelectAccount($("#Rows_" + NumberOfRows + "__AccountNumber"), NumberOfRows);
+        $("#Rows_" + NumberOfRows + "__Credit").val("");
+        $("#Rows_" + NumberOfRows + "__Debit").val("");
+
+        $("#Row_" + NumberOfRows).toggleClass('d-none');
+        NumberOfRows--;
+        $("#RowsUsed").val(NumberOfRows);
+        UpdateSum();
+    }
+
+    //Loops through visible rows and sums Credit, Debit columns
+    function UpdateSum() {
+        let creditSum = 0;
+        let debitSum = 0;
+
+
+        for (let i = 0; i <= NumberOfRows; i++) {
+            //Handle ',' as decimal sign
+
+            let rowDebit = parseFloat($("#Rows_" + i + "__Debit").val().replace(',', '.'));
+            let rowCredit = parseFloat($("#Rows_" + i + "__Credit").val().replace(',', '.'));
+
+            rowDebit = $.isNumeric(rowDebit) ? rowDebit : 0;
+            rowCredit = $.isNumeric(rowCredit) ? rowCredit : 0;
+
+            debitSum += rowDebit;
+            creditSum += rowCredit;
+        }
+        if (debitSum === creditSum)
+            $("#SumLabel").css('color', 'green');
+        else
+            $("#SumLabel").css('color', 'red');
+        $("#DebitSum").text(debitSum);
+        $("#CreditSum").text(creditSum);
+    }
+
+    function ValidateRow(object, row) {
+        let validateText = "";
+        //Validate account number
+        let accountNumber = $("#Rows_" + row + "__AccountNumber").val();
+
+        if (Accounts[accountNumber] == undefined)
+            validateText += "Konto saknas! ";
+
+        // Can only use either debit or credit field so empty other one
+        if (object.id == "Rows_" + row + "__Debit")
+            $("#Rows_" + row + "__Credit").val("");
+        else if (object.id == "Rows_" + row + "__Credit")
+            $("#Rows_" + row + "__Debit").val("");
+
+
+        $("#Rows_Warning_" + row).text(validateText);
+        UpdateSum(); //Finally update sums
+    }
+</script>

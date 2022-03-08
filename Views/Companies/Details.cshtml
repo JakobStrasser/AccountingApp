@@ -1,4 +1,4 @@
-﻿@model AccountingApp.Models.Company
+﻿@model AccountingApp.ViewModels.CompanyDetailsViewModel
 
 @{
     ViewData["Title"] = "Details";
@@ -10,21 +10,66 @@
     <h4>Company</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Company.Name)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Company.Name)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OfficialId)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Company.OfficialId)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OfficialId)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Company.OfficialId)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Company.Id">Redigera</a> |
+    <a asp-action="Index">Se lista</a>
 </div>
+<div>
+    <h4>Bokföringsår</h4>
+    <a asp-controller="AccountingYears" asp-action="Create" asp-route-companyId="@Model.Company.Id">Skapa bokföringsår</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Från datum</th>
+                <th>Till datum</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (AccountingYear year in Model.AccountingYears)
+            {
+                <tr>
+                    <td>@year.StartDate.ToShortDateString()</td>
+                    <td>@year.EndDate.ToShortDateString()</td>
+                    <td><a asp-controller="AccountingYears" asp-action="Details" asp-route-id="@year.Id">Visa</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <h4>Journal</h4>
+    <a asp-controller="Journal" asp-action="Create" asp-route-companyId="@Model.Company.Id">Skapa journal</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Namn</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Journal journal in Model.Journals)
+            {
+                <tr>
+                    <td>@journal.Name</td>
+                    <td><a asp-controller="Journal" asp-action="Details" asp-route-id="@journal.Id">Visa</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
