@@ -9,6 +9,8 @@ using AccountingApp.Data;
 using AccountingApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using AccountingApp.ViewModels;
+using Microsoft.AspNetCore.StaticFiles;
+using System.Text;
 
 namespace AccountingApp.Controllers
 {
@@ -28,7 +30,7 @@ namespace AccountingApp.Controllers
         public async Task<IActionResult> Index(int companyId)
         {
             ViewBag.companyId = companyId;
-            List<JournalEntry> journalEntries = await _context.JournalEntry.Where(je=>je.Company.Id == companyId).OrderBy(je => je.Date).ToListAsync();
+            List<JournalEntry> journalEntries = await _context.JournalEntry.Where(je => je.Company.Id == companyId).OrderBy(je => je.Date).ToListAsync();
             List<JournalEntriesListViewModel> journalEntriesListViewModels = new List<JournalEntriesListViewModel>();
             foreach (JournalEntry je in journalEntries)
             {
@@ -96,7 +98,7 @@ namespace AccountingApp.Controllers
             //Build selectlist for accounting year
             List<AccountingYear> years = await _context.AccountingYears.Where(ay => ay.CompanyId == company.Id).OrderByDescending(ay => ay.StartDate).ToListAsync();
             List<SelectListItem> yearList = GetAccountingYearSelectList(company.Id);
-           
+
 
             //Build dictionary for accounts
             List<Account> accounts = await _context.Accounts.Where(a => a.CompanyId == company.Id).OrderBy(a => a.AccountNumber).ToListAsync();
@@ -153,7 +155,7 @@ namespace AccountingApp.Controllers
                 journalEntry.Rows.Add(new LedgerEntry { JournalEntryId = journal.Id, AccountId = account.Id, Value = (model.Rows[i].Debit - model.Rows[i].Credit), Active = true });
             }
             await _context.SaveChangesAsync();
-            SubmitViewModel submitViewModel = new SubmitViewModel { JournalEntryId = journalEntry.Id, CompanyId= company.Id, Status = "Success!" };
+            SubmitViewModel submitViewModel = new SubmitViewModel { JournalEntryId = journalEntry.Id, CompanyId = company.Id, Status = "Success!" };
             return RedirectToAction("Submit", submitViewModel);
         }
 
@@ -263,7 +265,7 @@ namespace AccountingApp.Controllers
             catch (Exception ex)
             {
 
-                SubmitViewModel submitViewModel = new SubmitViewModel { JournalEntryId = null, CompanyId=null, Status = "<p>" + ex.Message + "</p><p>" + ex.StackTrace + "</p>" };
+                SubmitViewModel submitViewModel = new SubmitViewModel { JournalEntryId = null, CompanyId = null, Status = "<p>" + ex.Message + "</p><p>" + ex.StackTrace + "</p>" };
                 return View(submitViewModel);
             }
         }
@@ -292,14 +294,58 @@ namespace AccountingApp.Controllers
                         if (ledgerEntriesPerAccount.ContainsKey(ledgerEntry.Account))
                             ledgerEntriesPerAccount[ledgerEntry.Account].Add(ledgerEntry);
                         else
-                            ledgerEntriesPerAccount.Add(ledgerEntry.Account, new List<LedgerEntry> { ledgerEntry});
+                            ledgerEntriesPerAccount.Add(ledgerEntry.Account, new List<LedgerEntry> { ledgerEntry });
                     }
                 }
                 reportViewModel.Reports.Add(year, new YearReport { LedgerEntriesPerAccount = ledgerEntriesPerAccount });
             }
-           
+
 
             return View(reportViewModel);
+        }
+
+        [Route("JournalEntries/Export/{companyId}")]
+        public async Task<IActionResult> Export(int companyId)
+        {
+
+            List<SelectListItem> accountingYearsSelectListItems = GetAccountingYearSelectList(companyId);
+          
+            ExportViewModel exportViewModel = new ExportViewModel { CompanyId = companyId, AccountingYearsSelectListItems = accountingYearsSelectListItems };
+            return View(exportViewModel);
+        }
+
+
+        [HttpPost]
+        [Route("JournalEntries/Download")]
+        public async Task<ActionResult> Download(ExportViewModel viewModel)
+        {
+            //Get year & company
+            AccountingYear year = await _context.AccountingYears.FindAsync(int.Parse(viewModel.SelectedAccountingYear));
+            Company company = await _context.Companies.FindAsync(viewModel.CompanyId);
+
+            string xmlOutput = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?> <SieEntry xmlns = \"http://www.sie.se/sie5\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sie.se/sie5 http://www.sie.se/sie5.xsd\" >";
+
+            xmlOutput += "<FileInfo ><SoftwareProduct name = \"AccountingApp\" verison = \"1.0\" />";
+            xmlOutput += "<FileCreation time = \"" + DateTime.Now + "\" by = \"" + HttpContext.User.Identity.Name + "\" />";
+            xmlOutput += "<Company organizationId = \"" + company.OfficialId + "\" name = \"" + company.Name + "\" />";
+            xmlOutput += "<FiscalYears >";
+            xmlOutput += "<FiscalYear start = \"" + year.StartDate.Year + "-" + year.StartDate.Month + "\" end = \"" + year.EndDate.Year + "-" + year.EndDate.Month + "\" primary=\"true\" />";
+            xmlOutput += "</FiscalYears > <AccountingCurrency currency = \"SEK\" /> </FileInfo>";
+
+            List<JournalEntry> journalEntries = await _context.JournalEntry.Include(je => je.Rows).Where(je => je.AccountingYear == year && je.Company == company).ToListAsync();
+            foreach (JournalEntry journalEntry in journalEntries)
+            {
+                xmlOutput += "<JournalEntry journalDate=\"" + journalEntry.Date.ToShortDateString() + "\" text=\"" + journalEntry.Name + "\">";
+                List<LedgerEntry> ledgerEntries = await _context.LedgerEntries.Include(le => le.Account).Where(le => le.JournalEntryId == journalEntry.Id).ToListAsync();
+                foreach (LedgerEntry ledgerEntry in ledgerEntries)
+                {
+                    xmlOutput += "<LedgerEntry accountId=\"" + ledgerEntry.Account.AccountNumber + "\" amount=\"" + ledgerEntry.Value + "\"/>";
+                }
+                xmlOutput += "</JournalEntry>";
+            }
+
+            xmlOutput += "</SieEntry>";
+            return File(Encoding.UTF8.GetBytes(xmlOutput), "application/xml", company.Name+"-export.xml");
         }
 
         private bool JournalEntryExists(int id)
@@ -307,9 +353,9 @@ namespace AccountingApp.Controllers
             return _context.JournalEntry.Any(e => e.Id == id);
         }
 
-        private  List<SelectListItem> GetAccountingYearSelectList(int companyId)
+        private List<SelectListItem> GetAccountingYearSelectList(int companyId)
         {
-            List<AccountingYear> years =  _context.AccountingYears.Where(ay => ay.CompanyId == companyId).OrderBy(ay => ay.StartDate).ToList();
+            List<AccountingYear> years = _context.AccountingYears.Where(ay => ay.CompanyId == companyId).OrderBy(ay => ay.StartDate).ToList();
             List<SelectListItem> yearList = new List<SelectListItem>();
             foreach (AccountingYear y in years)
             {

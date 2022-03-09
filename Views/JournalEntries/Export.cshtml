@@ -1,0 +1,8 @@
+﻿@using AccountingApp.ViewModels
+@model  ExportViewModel
+<form asp-controller="JournalEntries" asp-action="Download" method="post">
+    <label>Välj bokföringsår att exportera</label>
+    <select asp-for="@Model.SelectedAccountingYear" asp-items="@Model.AccountingYearsSelectListItems"></select>
+    <input type="hidden" asp-for="@Model.CompanyId" value="@Model.CompanyId" />
+    <button type="submit">Exportera</button>
+</form>

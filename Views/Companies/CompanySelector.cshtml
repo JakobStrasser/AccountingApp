@@ -8,7 +8,9 @@
     <h3>@c.Name</h3>
     <h4><a asp-controller="JournalEntries" asp-action="Create" asp-route-Id="@c.Id">Bokför</a></h4>
     <h4><a asp-controller="JournalEntries" asp-action="Report" asp-route-Id="@c.Id">Rapport</a></h4>
+    <h4><a asp-controller="JournalEntries" asp-action="Export" asp-route-Id="@c.Id">Exportera bokföring</a></h4>
     <h4><a asp-controller="Companies" asp-action="Details" asp-route-id="@c.Id">Visa bolag</a></h4>
+
 }
 <hr />
 <h3><a href="/Companies/Create">Skapa nytt bolag</a></h3>

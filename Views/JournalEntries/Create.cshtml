@@ -110,11 +110,12 @@
     //Shows a new row
     function AddRowButtonClicked(object) {
 
-        NumberOfRows++;
+        
         let rowToShowId = "#Row_" + NumberOfRows;
 
         $(rowToShowId).toggleClass('d-none');
         $("#RowsUsed").val(NumberOfRows);
+        NumberOfRows++;
         UpdateSum();
     }
 
