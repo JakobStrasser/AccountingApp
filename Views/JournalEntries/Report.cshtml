@@ -1,38 +1,53 @@
 ﻿@using AccountingApp.ViewModels
 @model ReportViewModel
 
-<div id="accordion">
-    @foreach (AccountingYear year in Model.Reports.Keys)
-    {
-        <div class="card">
-            <div class="card-header">
-                <h3>@year.StartDate.ToShortDateString() - @year.EndDate.ToShortDateString()</h3>
-            </div>
-            @foreach (IGrouping<string, Account> accountGrouping in Model.Accounts.GroupBy(a => a.AccountClassName))
-            {
 
-                <div class="card-body">
-                    <h4>@accountGrouping.Key</h4>
+@foreach (AccountingYear year in Model.Reports.Keys)
+{
+    <div class="card">
+        <h2>@year.StartDate.ToShortDateString() - @year.EndDate.ToShortDateString()</h2>
+
+        @foreach (IGrouping<string, Account> accountGrouping in Model.Accounts.GroupBy(a => a.AccountClassName))
+        {
+            <div class="card-body">
+                <h4>@accountGrouping.Key</h4>
+                <table class="table table-bordered table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Konto</th>
+                            <th>Saldo</th>
+                        </tr>
+                    </thead>
                     @{
                         double accountGroupSum = 0;
                     }
-                    @foreach (Account account in accountGrouping)
-                    {
-                        @if (@Model.Reports[year].LedgerEntriesPerAccount.ContainsKey(account))
+                    <tbody>
+                        @foreach (Account account in accountGrouping)
                         {
-                            <div class="d-flex">
-                                <span>@account.AccountNumber - @account.Name </span>
-                                <span>@Model.Reports[year].LedgerEntriesPerAccount[account].Sum(le => le.Value)</span>
-                                @{
-                                    accountGroupSum += Model.Reports[year].LedgerEntriesPerAccount[account].Sum(le => le.Value);
-                                }
-                            </div>}
-                    }
-                    <h4>Summa - @accountGroupSum</h4>
-                </div>
+                            @if (@Model.Reports[year].LedgerEntriesPerAccount.ContainsKey(account))
+                            {
+                                <tr>
+                                    <td>@account.AccountNumber</td>
+                                    <td> @account.Name </td>
+                                    <td>@Model.Reports[year].LedgerEntriesPerAccount[account].Sum(le => le.Value)</td>
+                                    @{
+                                        accountGroupSum += Model.Reports[year].LedgerEntriesPerAccount[account].Sum(le => le.Value);
+                                    }
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Summa</td>
+                            <td> @accountGroupSum</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        }
+    </div>
+}
 
-            }
-        </div>
-    }
-</div>
+
 
