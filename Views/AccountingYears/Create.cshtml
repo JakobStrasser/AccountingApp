@@ -11,31 +11,20 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="CompanyId" class="control-label"></label>
-                <select asp-for="CompanyId" class ="form-control" asp-items="ViewBag.CompanyId"></select>
-            </div>
+            
+            <input asp-for="CompanyId" type="hidden" value="@Context.Request.Query["companyId"]"/>
+            
             <div class="form-group">
                 <label asp-for="StartDate" class="control-label"></label>
-                <input asp-for="StartDate" class="form-control" />
+                <input asp-for="StartDate" type="date" />
                 <span asp-validation-for="StartDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="EndDate" class="control-label"></label>
-                <input asp-for="EndDate" class="form-control" />
+                <input asp-for="EndDate" type="date" />
                 <span asp-validation-for="EndDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="PreviousAccountingYearId" class="control-label"></label>
-                <input asp-for="PreviousAccountingYearId" class="form-control" />
-                <span asp-validation-for="PreviousAccountingYearId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NextAccountingYearId" class="control-label"></label>
-                <input asp-for="NextAccountingYearId" class="form-control" />
-                <span asp-validation-for="NextAccountingYearId" class="text-danger"></span>
-            </div>
+          
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

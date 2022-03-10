@@ -107,16 +107,22 @@
     $("#SelectedDate").attr({ "min": '@Model.SelectedAccountingYearStartDate.ToShortDateString()' });
     $("#SelectedDate").attr({ "max": '@Model.SelectedAccountingYearEndDate.ToShortDateString()' });
 
+    //Validate();
     //Shows a new row
     function AddRowButtonClicked(object) {
 
-        
+        console.log("Add row button clicked:" + object.value)
+        console.log("Number of rows before:" + NumberOfRows);
         let rowToShowId = "#Row_" + NumberOfRows;
 
         $(rowToShowId).toggleClass('d-none');
         $("#RowsUsed").val(NumberOfRows);
+        ValidateRow($(rowToShowId), NumberOfRows);
         NumberOfRows++;
+        $("#RowsUsed").val(NumberOfRows);
+        console.log("Number of rows after:" + NumberOfRows);
         UpdateSum();
+        
     }
 
     //Check if current value exists as key in Accounts, populate account_name label for row
@@ -149,7 +155,8 @@
 
     //Moves every row below up one and clears and hides the last row
     function RemoveRow(object, row) {
-
+        console.log("Remove row button clicked :" + row + " - " + object.value);
+        console.log("Number of rows before:" + NumberOfRows);
         for (let i = row; i < NumberOfRows; i++) {
 
             $("#Rows_" + i + "__AccountNumber").val($("#Rows_" + (i + 1) + "__AccountNumber").val());
@@ -158,14 +165,17 @@
             $("#Rows_" + i + "__Credit").val($("#Rows_" + (i + 1) + "__Credit").val());
             $("#Rows_" + i + "__Credit").val($("#Rows_" + (i + 1) + "__Debit").val());
         }
+        NumberOfRows--;
+        //Clear values in last row
         $("#Rows_" + NumberOfRows + "__AccountNumber").val("");
         SelectAccount($("#Rows_" + NumberOfRows + "__AccountNumber"), NumberOfRows);
         $("#Rows_" + NumberOfRows + "__Credit").val("");
         $("#Rows_" + NumberOfRows + "__Debit").val("");
-
+        //Hide last row
         $("#Row_" + NumberOfRows).toggleClass('d-none');
-        NumberOfRows--;
+     
         $("#RowsUsed").val(NumberOfRows);
+        console.log("Number of rows after:" + NumberOfRows);
         UpdateSum();
     }
 
@@ -173,7 +183,6 @@
     function UpdateSum() {
         let creditSum = 0;
         let debitSum = 0;
-
 
         for (let i = 0; i <= NumberOfRows; i++) {
             //Handle ',' as decimal sign
@@ -193,6 +202,7 @@
             $("#SumLabel").css('color', 'red');
         $("#DebitSum").text(debitSum);
         $("#CreditSum").text(creditSum);
+        //Validate();
     }
 
     function ValidateRow(object, row) {
@@ -212,5 +222,29 @@
 
         $("#Rows_Warning_" + row).text(validateText);
         UpdateSum(); //Finally update sums
+    }
+
+    function Validate() {
+        let validated = true;
+        //Check row warnings
+        for (let i = 0; i < NumberOfRows; i++) {
+            if ($("#Rows_Warning_" + i).text !== "") {
+                validated = false;
+            }                         
+        }
+
+        if ($("#DebitSum").text() != $("#CreditSum").text()) {
+            validated = false;
+        }
+
+        if (validated) {
+            console.log("Enable button");
+            $("#SubmitFormButton").prop("disabled", false);
+        }
+        else {
+            console.log("Disable button");
+            $("#SubmitFormButton").prop("disabled", true);
+        }
+
     }
 </script>

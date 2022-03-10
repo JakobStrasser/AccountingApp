@@ -144,7 +144,7 @@ namespace AccountingApp.Controllers
             journal.JournalEntries.Add(journalEntry);
 
             //Loop over each row and add to JournalEntry
-            for (int i = 0; i <= model.RowsUsed; i++)
+            for (int i = 0; i < model.RowsUsed; i++)
             {
                 int accountNumber = int.Parse(model.Rows[i].AccountNumber);
                 Account account = await _context.Accounts.Where(a => a.CompanyId == company.Id && a.AccountNumber == accountNumber).FirstAsync();
@@ -305,7 +305,7 @@ namespace AccountingApp.Controllers
         }
 
         [Route("JournalEntries/Export/{companyId}")]
-        public async Task<IActionResult> Export(int companyId)
+        public IActionResult Export(int companyId)
         {
 
             List<SelectListItem> accountingYearsSelectListItems = GetAccountingYearSelectList(companyId);
